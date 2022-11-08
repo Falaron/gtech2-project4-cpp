@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src",
+    "\\src\\headers"
   ],
-  "SelectedNode": "\\C:\\Users\\arthurjouve\\Documents\\Visual Studio 2022\\Projects",
+  "SelectedNode": "\\src\\headers\\Header.h",
   "PreviewInSolutionExplorer": false
 }

@@ -15,21 +15,23 @@ __
 ```cpp
 class Bottle {
 	private:
-		int quantity; //max capacity of the bottle
-		int actual_quantity; //maximum quantity left in the bottle
-		int min_quantity; //minimum amount the baby must drink
-		char taken_time; //time the bottle was taken
-		bool regurgigated; //if the baby regurgitates the bottle
-		int reminder; //reminder of the next bottle to give
+		int quantity;		//max capacity of the bottle
+		int actual_quantity;	//maximum quantity left in the bottle
+		int min_quantity;	//minimum amount the baby must drink
+		char taken_time;	//time the bottle was taken
+		bool regurgigated;	//if the baby regurgitates the bottle
+		int reminder;		//reminder of the next bottle to give
 	
 	public:
-		void refill; //refill the bottle if there is not enough quantity in it
+		void refill;		//refill the bottle if there is not enough quantity in it
 };
 ```
 
 ### **Bottle feeding**
 1. Check that the amount for the intake is correct
 	- Fill bottle:** Fill bottle if: actual_quantity < min_quantity
+
 2. Give the same amount for each feeding
+
 3. **Reminder** after each feeding:
 	- Next intake reminder = taken_time + reminder

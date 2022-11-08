@@ -30,8 +30,10 @@ class Bottle {
 1. Give the same amount for each feeding
 
 2. Check if the amount for the intake is correct
-	- if actual_quantity < min_quantity : **Fill bottle:**
+	- if actual_quantity < min_quantity && not to late in the day : **Fill bottle:**
 	- if **regurgitated** is true : note quantity regurgitated
 
 4. **Reminder** after each feeding:
 	- Next intake reminder = taken_time + reminder
+
+5. **Shopping** : Runs periodically, using the same amount of milk each time

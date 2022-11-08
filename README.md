@@ -13,23 +13,23 @@ __
 
 ### **Structure of the program:**
 ```cpp
-class Biberon {
+class Bottle {
 	private:
-		int quantity;		//capacité max du biberon
-		int actual_quantity;		//quantité max restante dans le biberon
-		int min_quantity;		//quantité minimum que le bébé doit boire
-		char taken_time;		//heure prise du biberon
-		bool regurgigated;		//si le bébé régurgite le biberon
-		int reminder;		//rappel du prochain biberon à donner
+		int quantity; //max capacity of the bottle
+		int actual_quantity; //maximum quantity left in the bottle
+		int min_quantity; //minimum amount the baby must drink
+		char taken_time; //time the bottle was taken
+		bool regurgigated; //if the baby regurgitates the bottle
+		int reminder; //reminder of the next bottle to give
 	
 	public:
-		void refill;		//remplir le biberon s'il n'y a pas assez de quantité dedans
+		void refill; //refill the bottle if there is not enough quantity in it
 };
 ```
 
-### **Prise de biberon**
-1. Vérifier que la quantité pour la prise est bonne
-	- **Remplissage du biberon :** Remplir le biberon si : actual_quantity < min_quantity
-2. Donner la même quantité à chaque prise de biberon
-3. **Rappel** après chaque prise :
-	- Prochain rappel de prise = taken_time + reminder
+### **Bottle feeding**
+1. Check that the amount for the intake is correct
+	- Fill bottle:** Fill bottle if: actual_quantity < min_quantity
+2. Give the same amount for each feeding
+3. **Reminder** after each feeding:
+	- Next intake reminder = taken_time + reminder

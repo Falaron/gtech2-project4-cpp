@@ -10,9 +10,18 @@
 - Create a shopping list for the baby
 
 **Structure of the program:**
-`class Biberon {
-	int quantit�
-	char heure_prise => temps apr�s lequel le b�b� doit reprendre le biberon
-	bool r�gurgiter
+```cpp
+class Biberon {
+	private:
+		int quantity;			//capacité max du biberon
+		int actual_quantity;	//quantité max restante dans le biberon
+		char taken_time;		//heure prise du biberon
+		bool regurgigated;		//si le bébé régurgite le biberon
+		int reminder;			//rappel du prochain biberon à donner
+	
+	public:
+		void refill;			//remplir le biberon s'il n'y a pas assez de quantité dedans
+};
 
-}
+//
+```

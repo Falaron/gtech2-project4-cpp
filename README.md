@@ -45,12 +45,15 @@ Bottle() {
 		Input(/* element by element */); //entered by the parent
 };
 
-//Shop Management
-class ShoppingList {
+//Product Management
+class Product {
 	private:
-		
+		string productList[];
+		int productQuantity[];
+		int quantityRemaining[];
+		string shoppingList[];
 	public:
-		ShoppingList();
+		Product();
 };
 ```
 

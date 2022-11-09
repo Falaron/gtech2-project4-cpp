@@ -15,14 +15,45 @@ __
 ```cpp
 class Bottle {
 	private:
-		int quantity;		//max capacity of the bottle
-		int actual_quantity;	//maximum quantity left in the bottle
-		int min_quantity;	//minimum amount the baby must drink
-		char taken_time;	//time the bottle was taken
+		int max_capacity = 100;	//maximum quantity left in the bottle
+		int actual_quantity = max_capacity;	//maximum quantity left in the bottle
+		int max_quantity = 15;	//maximum amount the baby must drink
+		int min_quantity = 10;	//minimum amount the baby must drink
+		
+		int taken_time;	//time the bottle was taken
 		bool regurgigated;	//if the baby regurgitates the bottle
 		int reminder;		//reminder of the next bottle to give
 	public:
+		Bottle();
 		void refill;		//refill the bottle if there is not enough quantity in it
+};
+
+//Bottle Management
+Bottle() {
+	private:
+		int max_capacity = 100;
+		int actual_quantity = max_capacity;
+		int max_quantity = 15;
+		int min_quantity = 10;
+		
+		bool regurgigated = false;
+		int taked_time = 3; //hours
+	public:
+		Bottle();
+		Bottle(int, int, int, int);
+		Print(); //print information for the parent
+		Input(/* element by element */); //entered by the parent
+};
+
+//Product Management
+class Product {
+	private:
+		string productList[];
+		int productQuantity[];
+		int quantityRemaining[];
+		string shoppingList[];
+	public:
+		Product();
 };
 ```
 
@@ -37,3 +68,5 @@ class Bottle {
 	- Next intake reminder = taken_time + reminder
 
 5. **Shopping** : Runs periodically, using the same amount of milk each time
+	- Keep track of necessary products
+	- indicates when to boy the products

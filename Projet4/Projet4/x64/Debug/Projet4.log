@@ -1,2 +1,5 @@
-﻿  index.cpp
-  Projet4.vcxproj -> C:\Users\arthurjouve\Documents\Visual Studio 2022\Projects\Projet4\x64\Debug\Projet4.exe
+﻿  window.cpp
+SDL2main.lib(SDL_windows_main.obj) : error LNK2019: symbole externe non résolu SDL_main référencé dans la fonction main_getcmdline
+    Conseil sur les symboles définis et susceptibles de correspondre :
+      "int __cdecl SDL_main(void)" (?SDL_main@@YAHXZ)
+C:\Users\arthurjouve\Documents\Visual Studio 2022\Projects\Projet4\x64\Debug\Projet4.exe : fatal error LNK1120: 1 externes non résolus

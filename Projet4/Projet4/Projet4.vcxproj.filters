@@ -32,10 +32,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\..\..\..\Desktop\gtech2-project4-cpp-main\gtech2-project4-cpp-main\README.md" />
-    <None Include="..\..\..\..\..\Desktop\gtech2-project4-cpp-main\gtech2-project4-cpp-main\.gitignore" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="..\..\..\..\..\Desktop\gtech2-project4-cpp-main\gtech2-project4-cpp-main\exo classes\exoRationnel.h">
       <Filter>Fichiers sources\exercices</Filter>
     </ClInclude>

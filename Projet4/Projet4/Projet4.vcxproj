@@ -138,10 +138,6 @@
     <ClCompile Include="..\..\..\..\..\Desktop\gtech2-project4-cpp-main\gtech2-project4-cpp-main\exo cpp\exo1.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\..\..\..\Desktop\gtech2-project4-cpp-main\gtech2-project4-cpp-main\.gitignore" />
-    <None Include="..\..\..\..\..\Desktop\gtech2-project4-cpp-main\gtech2-project4-cpp-main\README.md" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="..\..\..\..\..\Desktop\gtech2-project4-cpp-main\gtech2-project4-cpp-main\exo classes\exoRationnel.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

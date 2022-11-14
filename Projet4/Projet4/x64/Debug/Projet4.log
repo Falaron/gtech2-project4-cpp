@@ -1,2 +1,5 @@
-﻿  main.cpp
-  Projet4.vcxproj -> C:\Users\arthu\Desktop\gtech2-project4-cpp\Projet4\x64\Debug\Projet4.exe
+﻿  Text.cpp
+C:\Users\Orrigine\source\repos\gtech2-project4-cpp\Projet4\Projet4\Widget.hpp(9,24): warning C4091: 'typedef ' : ignoré à gauche de 'SDL_Event' quand aucune variable n'est déclarée
+C:\Users\Orrigine\source\repos\gtech2-project4-cpp\Projet4\Projet4\View.hpp(11,24): warning C4091: 'typedef ' : ignoré à gauche de 'SDL_Event' quand aucune variable n'est déclarée
+C:\Users\Orrigine\source\repos\gtech2-project4-cpp\Projet4\Projet4\Widget.hpp(9,24): warning C4091: 'typedef ' : ignoré à gauche de 'SDL_Event' quand aucune variable n'est déclarée
+C:\Users\Orrigine\source\repos\gtech2-project4-cpp\Projet4\Projet4\View.hpp(11,24): warning C4091: 'typedef ' : ignoré à gauche de 'SDL_Event' quand aucune variable n'est déclarée

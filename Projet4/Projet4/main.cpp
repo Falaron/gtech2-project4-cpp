@@ -1,5 +1,5 @@
 #include "window.hpp"
-
+#include <iostream>
 using namespace std;
 
 int main(int argc, char* argv[])
@@ -27,6 +27,8 @@ int main(int argc, char* argv[])
             if (main_window->frameSlower >= 12) {
 
                 //Stuff in frame
+                main_window->DrawText();
+                main_window->Refresh();
                 main_window->frameSlower = 0;
             }
             main_window->frameSlower++;

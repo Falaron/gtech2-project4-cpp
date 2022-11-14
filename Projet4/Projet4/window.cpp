@@ -18,6 +18,17 @@ Window::Window(const char* WindowName, int Width, int Height) {
     }
 
 
+    //Init TTF
+    if (TTF_Init() < 0)
+    {
+        cout << "Couldn't initialize SDL TTF:" << SDL_GetError() << endl;
+        return;
+    }
+    TTF_Init();
+    //font = TTF_OpenFont("arial.ttf", 25);
+    //color = { 255, 0, 0 };
+
+
     //Create window
     window = SDL_CreateWindow(WindowName, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, Width, Height, SDL_WINDOW_SHOWN);
     if (window == NULL) {
@@ -35,13 +46,16 @@ Window::Window(const char* WindowName, int Width, int Height) {
         return;
     }
 
+
     SDL_RenderClear(renderer);
+
     return;
 }
 
 int Window::Destroy() {
     SDL_DestroyWindow(window);
     SDL_DestroyRenderer(renderer);
+    TTF_Quit();
     SDL_Quit();
 
     return EXIT_FAILURE;
@@ -63,4 +77,14 @@ int Window::Refresh() {
 
 SDL_Renderer** Window::GetRenderer() {
     return &renderer;
+}
+
+int Window::DrawText() {
+    string text = "BONJOUR";
+    surface = TTF_RenderText_Solid(font, text.c_str(), color);
+    texture = SDL_CreateTextureFromSurface(renderer, surface);
+    SDL_QueryTexture(texture, NULL, NULL, 0, 0);
+    SDL_Rect textRect = { 50, 100, 100, 150 };
+    SDL_RenderCopy(renderer, texture, NULL, &textRect);
+    return  1;
 }

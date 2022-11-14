@@ -1,4 +1,5 @@
 #include <SDL.h>
+#include "SDL_ttf.h"
 
 class Window
 {
@@ -8,6 +9,7 @@ public:
     int Destroy();
     SDL_Renderer** GetRenderer();
     void CheckKeys();
+    int DrawText();
 
     int winWidth, winHeight;
 
@@ -16,6 +18,11 @@ public:
     Uint32 frame_time_start, frame_time;
     Uint32 frame_rate;
     int frameSlower;
+
+    SDL_Surface* surface;
+    SDL_Texture* texture;
+    TTF_Font* font;
+    SDL_Color color;
 
 private:
     SDL_Window* window;

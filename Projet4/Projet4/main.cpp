@@ -5,7 +5,7 @@ using namespace std;
 int main(int argc, char* argv[])
 {
     //Init Window
-    Window* main_window = new Window("Baby", 1000, 600);
+    Window* main_window = new Window("Baby", 360, 611);
 
     while (main_window->closeRequest == 0) {
         main_window->frame_time_start = SDL_GetTicks();

@@ -29,6 +29,7 @@ int main(int argc, char* argv[])
                 //Stuff in frame
                 main_window->DrawText("Hello 1", 10, 10);
                 main_window->DrawText("Hello 2", main_window->winWidth/2-40, 50);
+                //main_window->Input();
                 main_window->Refresh();
                 main_window->frameSlower = 0;
             }

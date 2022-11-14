@@ -48,9 +48,10 @@ Window::Window(const char* WindowName, int Width, int Height) {
         cout << "Couldn't create renderer :" << SDL_GetError() << endl;
         return;
     }
-
-
     SDL_RenderClear(renderer);
+
+    //Input TTF
+    SDL_StartTextInput();
 
     return;
 }
@@ -59,6 +60,7 @@ int Window::Destroy() {
     SDL_DestroyWindow(window);
     SDL_DestroyRenderer(renderer);
     TTF_Quit();
+    SDL_StopTextInput();
     SDL_Quit();
 
     return EXIT_FAILURE;
@@ -94,4 +96,26 @@ int Window::DrawText(const char* text, int positionX, int positionY) {
     SDL_Rect textRect = { positionX, positionY, surface->w, surface->h};
     SDL_RenderCopy(renderer, texture, NULL, &textRect);
     return  1;
+}
+
+int Window::Input() {
+    string in;
+    bool running = true;
+
+    while (running) {
+        SDL_Event ev;
+        while (SDL_PollEvent(&ev)) {
+            if (ev.type == SDL_TEXTINPUT) {
+                in += ev.text.text;
+                cout << " > " << in << endl;
+            }
+            else if (ev.type == SDL_KEYDOWN && ev.key.keysym.sym == SDLK_BACKSPACE && in.size()) {
+                in.pop_back();
+                cout << " > " << in << endl;
+            } else if (ev.type == SDL_QUIT) {
+                running = false;
+            }
+        }
+    }
+    return 1;
 }

@@ -11,6 +11,7 @@ public:
     void ClearRenderer(SDL_Renderer* renderer);
     void CheckKeys();
     int DrawText(const char* text, int positionX, int positionY);
+    int Input();
 
     int winWidth, winHeight;
 

@@ -13,20 +13,8 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Fichiers sources\exercices">
-      <UniqueIdentifier>{6f081fd4-c5d6-4f69-80a0-8dde90551723}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\Desktop\gtech2-project4-cpp-main\gtech2-project4-cpp-main\exo cpp\exo1.cpp">
-      <Filter>Fichiers sources\exercices</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\Desktop\gtech2-project4-cpp-main\gtech2-project4-cpp-main\exo classes\exoRationnel.cpp">
-      <Filter>Fichiers sources\exercices</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\Desktop\gtech2-project4-cpp-main\gtech2-project4-cpp-main\exo classes\exoMain.cpp">
-      <Filter>Fichiers sources\exercices</Filter>
-    </ClCompile>
     <ClCompile Include="bottle.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
@@ -38,9 +26,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\Desktop\gtech2-project4-cpp-main\gtech2-project4-cpp-main\exo classes\exoRationnel.hpp">
-      <Filter>Fichiers sources\exercices</Filter>
-    </ClInclude>
     <ClInclude Include="bottle.hpp">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>

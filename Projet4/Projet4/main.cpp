@@ -2,7 +2,8 @@
 
 using namespace std;
 
-int main() {
+int main(int argc, char* argv[])
+{
     //Init Window
     Window* main_window = new Window("Baby", 1000, 600);
 

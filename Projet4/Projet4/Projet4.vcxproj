@@ -71,8 +71,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>C:\Users\arthurjouve\Desktop\SDL2-2.24.2\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\arthurjouve\Desktop\SDL2-2.24.2\lib\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\Orrigine\Desktop\Cours\C++\lib\SDL2_lib\include;C:\Users\rmateescu\Desktop\SDL2-2.24.2\include;C:\Users\arthurjouve\Desktop\SDL2-2.24.2\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\SDL_VSCPP\SDL2-2.24.2\lib\x64;C:\Users\rmateescu\Desktop\SDL2-2.24.2\lib\x64;C:\Users\arthurjouve\Desktop\SDL2-2.24.2\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -132,15 +132,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\Desktop\gtech2-project4-cpp-main\gtech2-project4-cpp-main\exo classes\exoMain.cpp" />
-    <ClCompile Include="..\..\..\..\..\Desktop\gtech2-project4-cpp-main\gtech2-project4-cpp-main\exo classes\exoRationnel.cpp" />
-    <ClCompile Include="..\..\..\..\..\Desktop\gtech2-project4-cpp-main\gtech2-project4-cpp-main\exo cpp\exo1.cpp" />
     <ClCompile Include="bottle.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="window.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\Desktop\gtech2-project4-cpp-main\gtech2-project4-cpp-main\exo classes\exoRationnel.hpp" />
     <ClInclude Include="bottle.hpp" />
     <ClInclude Include="window.hpp" />
   </ItemGroup>

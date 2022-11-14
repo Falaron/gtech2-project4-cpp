@@ -61,6 +61,12 @@ int Window::Destroy() {
     return EXIT_FAILURE;
 }
 
+void Window::ClearRenderer(SDL_Renderer* renderer)
+{
+    SDL_SetRenderDrawColor(renderer, 0, 0, 0, SDL_ALPHA_OPAQUE);
+    SDL_RenderClear(renderer);
+}
+
 void Window::CheckKeys() {
     const Uint8* keystates = SDL_GetKeyboardState(NULL);
 

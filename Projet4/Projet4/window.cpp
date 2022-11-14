@@ -21,12 +21,15 @@ Window::Window(const char* WindowName, int Width, int Height) {
     //Init TTF
     if (TTF_Init() < 0)
     {
-        cout << "Couldn't initialize SDL TTF:" << SDL_GetError() << endl;
+        cout << "Couldn't initialize SDL TTF:" << TTF_GetError() << endl;
         return;
     }
-    TTF_Init();
-    //font = TTF_OpenFont("arial.ttf", 25);
-    //color = { 255, 0, 0 };
+
+    font = TTF_OpenFont("font/barlow.ttf", 25);
+    if (!font) {
+        cout << "Failed to load font: " << TTF_GetError() << endl;
+    }
+    color = { 255, 255, 255 };
 
 
     //Create window
@@ -85,12 +88,10 @@ SDL_Renderer** Window::GetRenderer() {
     return &renderer;
 }
 
-int Window::DrawText() {
-    string text = "BONJOUR";
-    surface = TTF_RenderText_Solid(font, text.c_str(), color);
+int Window::DrawText(const char* text, int positionX, int positionY) {
+    surface = TTF_RenderText_Solid(font, text, color);
     texture = SDL_CreateTextureFromSurface(renderer, surface);
-    SDL_QueryTexture(texture, NULL, NULL, 0, 0);
-    SDL_Rect textRect = { 50, 100, 100, 150 };
+    SDL_Rect textRect = { positionX, positionY, surface->w, surface->h};
     SDL_RenderCopy(renderer, texture, NULL, &textRect);
     return  1;
 }

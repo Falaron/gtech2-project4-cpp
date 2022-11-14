@@ -7,6 +7,7 @@ public:
     int Refresh();
     int Destroy();
     SDL_Renderer** GetRenderer();
+    void ClearRenderer(SDL_Renderer* renderer);
     void CheckKeys();
 
     int winWidth, winHeight;

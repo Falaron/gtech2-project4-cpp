@@ -1,6 +1,7 @@
 #pragma once
 
-#include "Window.hpp"
+#include "window.hpp"
+#include <SDL_image.h>
 
  class ImageLoader
  {

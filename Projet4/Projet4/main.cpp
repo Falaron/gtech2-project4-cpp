@@ -30,6 +30,8 @@ int main(int argc, char* argv[])
                 main_window->DrawText("Hello 1", 10, 10);
                 main_window->DrawText("Hello 2", main_window->winWidth/2-40, 50);
                 //main_window->Input();
+                main_window->CheckKeys();
+                main_window->showImage("img/logo.png",main_window->winWidth/2-40,7,83,32);
                 main_window->Refresh();
                 main_window->frameSlower = 0;
             }

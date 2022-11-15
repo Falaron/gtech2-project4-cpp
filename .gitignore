@@ -13,6 +13,11 @@
 
 # Ignore directory
 .vs/
+Projet4/.vs/
+Projet4/x64/
+Projet4/Projet4/x64/
+Projet4/Projet4/x64/Debug/Projet4.tlog/Projet4.lastbuildstate
+Projet4/Projet4/x64/Debug/Projet4.log
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
@@ -406,3 +411,8 @@ Projet4/.vs/Projet4/v17/Browse.VC.db
 Projet4/.vs/Projet4/v17/.suo
 Projet4/.vs/Projet4/v17/Browse.VC.db
 *.db
+Projet4/Projet4/x64/Debug/Projet4.tlog/CL.command.1.tlog
+*.tlog
+*.tlog
+*.tlog
+*.vcxproj

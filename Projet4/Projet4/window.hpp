@@ -1,5 +1,6 @@
 #include <SDL.h>
 #include "SDL_ttf.h"
+#include "SDL_image.h"
 
 class Window
 {
@@ -13,6 +14,7 @@ public:
     void CheckKeys();
     int DrawText(const char* text, int positionX, int positionY);
     int Input();
+    int showImage(const char* img_name, int positionX, int positionY, int width, int height);
 
     int winWidth, winHeight;
 

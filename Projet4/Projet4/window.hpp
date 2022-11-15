@@ -7,7 +7,8 @@ public:
     Window(const char* WindowName, int Width, int Height);
     int Refresh();
     int Destroy();
-    SDL_Renderer** GetRenderer();
+    SDL_Window* GetSDLWindow();
+    SDL_Renderer* GetRenderer();
     void ClearRenderer(SDL_Renderer* renderer);
     void CheckKeys();
     int DrawText(const char* text, int positionX, int positionY);

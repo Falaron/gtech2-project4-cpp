@@ -86,8 +86,13 @@ int Window::Refresh() {
     return 1;
 }
 
-SDL_Renderer** Window::GetRenderer() {
-    return &renderer;
+SDL_Window* Window::GetSDLWindow()
+{
+    return window;
+}
+
+SDL_Renderer* Window::GetRenderer() {
+    return renderer;
 }
 
 int Window::DrawText(const char* text, int positionX, int positionY) {
@@ -95,6 +100,8 @@ int Window::DrawText(const char* text, int positionX, int positionY) {
     texture = SDL_CreateTextureFromSurface(renderer, surface);
     SDL_Rect textRect = { positionX, positionY, surface->w, surface->h};
     SDL_RenderCopy(renderer, texture, NULL, &textRect);
+    SDL_FreeSurface(surface);
+    SDL_DestroyTexture(texture);
     return  1;
 }
 

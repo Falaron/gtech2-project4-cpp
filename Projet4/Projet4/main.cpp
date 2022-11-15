@@ -1,11 +1,20 @@
 #include "window.hpp"
 #include <iostream>
+#include "View.hpp"
+#include "Button.hpp"
+#include "Widget.hpp"
 using namespace std;
 
 int main(int argc, char* argv[])
 {
     //Init Window
     Window* main_window = new Window("Baby", 360, 611);
+
+    View *view = new View(main_window->GetSDLWindow(), main_window->GetRenderer());
+    view->setFont(main_window->font);
+    Button* button1 = new Button("coucou");
+    view->addWidget(button1);
+
 
     while (main_window->closeRequest == 0) {
         main_window->frame_time_start = SDL_GetTicks();
@@ -27,8 +36,10 @@ int main(int argc, char* argv[])
             if (main_window->frameSlower >= 12) {
 
                 //Stuff in frame
+                view->render();
+
                 main_window->DrawText("Hello 1", 10, 10);
-                main_window->DrawText("Hello 2", main_window->winWidth/2-40, 50);
+                main_window->DrawText("Hello 2", main_window->winWidth / 2 - 40, 50);
                 //main_window->Input();
                 main_window->Refresh();
                 main_window->frameSlower = 0;
@@ -37,5 +48,7 @@ int main(int argc, char* argv[])
             SDL_Delay(main_window->frame_rate - main_window->frame_time);
         }
     }
+        delete view;
+        view = 0;
     return main_window->Destroy();
 }

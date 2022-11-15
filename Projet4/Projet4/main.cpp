@@ -5,25 +5,56 @@
 #include "Widget.hpp"
 using namespace std;
 
-void heloo()
-{
-    cout << "HELOOOOOO\n";
-}
+
 
 View* currentView;
+
+void heloo()
+{
+    cout << "HELLOOOOOOOO" << endl;
+}
 
 int main(int argc, char* argv[])
 {
     //Init Window
+
     Window* main_window = new Window("Baby", 360, 611);
 
-    View *view = new View(main_window->GetSDLWindow(), main_window->GetRenderer());
-    view->setFont(main_window->font);
-    Button* button1 = new Button("coucou");
-    button1->setOnClickCallback(heloo);
-    view->addWidget(button1);
 
-    currentView = view;
+    //init main view
+    View *viewMain = new View(main_window->GetSDLWindow(), main_window->GetRenderer());
+    viewMain->setFont(main_window->font);
+    Button* button1 = new Button("PageMain");
+    button1->setOnClickCallback(heloo);
+    viewMain->addWidget(button1);
+
+    //init view Feed
+    View* viewFeed = new View(main_window->GetSDLWindow(), main_window->GetRenderer());
+    viewFeed->setFont(main_window->font);
+    Button* button2 = new Button("PageFeed");
+    viewFeed->addWidget(button2);
+
+    //init view Regurgited
+    View* viewRegurgited = new View(main_window->GetSDLWindow(), main_window->GetRenderer());
+    viewRegurgited->setFont(main_window->font);
+    Button* button3 = new Button("PageRegurgited");
+    viewRegurgited->addWidget(button3);
+
+    //init view Settings
+    View* viewSettings = new View(main_window->GetSDLWindow(), main_window->GetRenderer());
+    viewSettings->setFont(main_window->font);
+    Button* button4 = new Button("PageSettings");
+    viewSettings->addWidget(button4);
+
+    //init view Shop
+    View* viewShop = new View(main_window->GetSDLWindow(), main_window->GetRenderer());
+    viewShop->setFont(main_window->font);
+    Button* button5 = new Button("PageShop");
+    viewShop->addWidget(button5);
+
+
+    currentView = viewFeed;
+    
 
     //Widget* footer = new Widget();
 
@@ -48,11 +79,16 @@ int main(int argc, char* argv[])
             if (main_window->frameSlower >= 12) {
 
                 //Stuff in frame
+
                 currentView->render();
 
                 
-                main_window->CheckKeys();
+               
                // main_window->showImage("img/logo.png",main_window->winWidth/2-40,7,83,32);
+
+                
+                main_window->CheckKeys();
+
                 main_window->Refresh();
                 main_window->frameSlower = 0;
             }
@@ -60,7 +96,21 @@ int main(int argc, char* argv[])
             SDL_Delay(main_window->frame_rate - main_window->frame_time);
         }
     }
-        delete view;
-        view = 0;
+        // Free the memory
+        delete viewMain;
+        viewMain = 0;
+
+        delete viewFeed;
+        viewFeed = 0;
+
+        delete viewSettings;
+        viewSettings= 0;
+
+        delete viewShop;
+        viewShop = 0;
+
+        delete viewRegurgited;
+        viewRegurgited = 0;
+
     return main_window->Destroy();
 }

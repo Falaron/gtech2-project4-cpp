@@ -5,6 +5,13 @@
 #include "Widget.hpp"
 using namespace std;
 
+void heloo()
+{
+    cout << "HELOOOOOO\n";
+}
+
+View* currentView;
+
 int main(int argc, char* argv[])
 {
     //Init Window
@@ -13,13 +20,16 @@ int main(int argc, char* argv[])
     View *view = new View(main_window->GetSDLWindow(), main_window->GetRenderer());
     view->setFont(main_window->font);
     Button* button1 = new Button("coucou");
+    button1->setOnClickCallback(heloo);
     view->addWidget(button1);
+
+    currentView = view;
+
+    //Widget* footer = new Widget();
 
 
     while (main_window->closeRequest == 0) {
         main_window->frame_time_start = SDL_GetTicks();
-
-        SDL_PollEvent(&main_window->event);
 
         main_window->frame_time = SDL_GetTicks() - main_window->frame_time_start;
 
@@ -29,6 +39,8 @@ int main(int argc, char* argv[])
                 main_window->closeRequest = 1;
                 break;
             }
+
+            currentView->handleEvent(main_window->event);
         }
 
         if (main_window->frame_time < main_window->frame_rate)
@@ -36,11 +48,11 @@ int main(int argc, char* argv[])
             if (main_window->frameSlower >= 12) {
 
                 //Stuff in frame
-                view->render();
+                currentView->render();
 
                 
                 main_window->CheckKeys();
-                main_window->showImage("img/logo.png",main_window->winWidth/2-40,7,83,32);
+               // main_window->showImage("img/logo.png",main_window->winWidth/2-40,7,83,32);
                 main_window->Refresh();
                 main_window->frameSlower = 0;
             }

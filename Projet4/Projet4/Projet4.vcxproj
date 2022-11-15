@@ -134,9 +134,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="bottle.cpp" />
+    <ClCompile Include="Box.cpp" />
     <ClCompile Include="Button.cpp" />
     <ClCompile Include="Color.cpp" />
     <ClCompile Include="ImageLoader.cpp" />
+    <ClCompile Include="List.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Text.cpp" />
     <ClCompile Include="View.cpp" />
@@ -146,9 +148,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bottle.hpp" />
+    <ClInclude Include="Box.h" />
     <ClInclude Include="Button.hpp" />
     <ClInclude Include="Color.hpp" />
     <ClInclude Include="ImageLoader.hpp" />
+    <ClInclude Include="List.h" />
     <ClInclude Include="Text.hpp" />
     <ClInclude Include="View.hpp" />
     <ClInclude Include="Widget.hpp" />

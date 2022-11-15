@@ -58,7 +58,7 @@ void Button::render( SDL_Renderer* r )
 void Button::onAddToView(View* v)
 {
 	// Generate label texture.
-	SDL_Surface* temp = TTF_RenderText_Blended(this->view->getFont(), this->label.c_str(), { 0, 0, 0, 255 });
+	SDL_Surface* temp = TTF_RenderText_Blended(this->view->getFont(), this->label.c_str(), { 0, 0, 0, 0xFF });
 	this->labelTexture = SDL_CreateTextureFromSurface(this->view->getSDLRenderer(), temp);
 	SDL_FreeSurface(temp);
 }

@@ -51,7 +51,7 @@ Window::Window(const char* WindowName, int Width, int Height) {
         cout << "Couldn't create renderer :" << SDL_GetError() << endl;
         return;
     }
-    SDL_RenderClear(renderer);
+       
 
 
     //Init SDL_Image

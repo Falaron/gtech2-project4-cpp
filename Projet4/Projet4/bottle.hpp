@@ -3,17 +3,24 @@
 class Bottle {
 public:
 	Bottle();
-	Bottle(int taked_time, int min_quantity, int max_quantity, int max_bottle);
+	void IsFeedingTime();
+	void Feed();
+	void Refill(int bottleQuantity);
+	void ChangeVolume();
+	void Regurgited();
 
 	void Print(); //print informations
 	//void Input(/* element by element */);
 
 private:
-	int max_bottle = 100;
-	int actual_quantity = max_bottle;
+	int bottleVolume = 100;
+	int bottleQuantity = bottleVolume;
 	int max_quantity = 15;
 	int min_quantity = 10;
+	int quantityFed = 0;
 
-	bool regurgigated = false;
-	int taked_time = 3; //hours
+	int improvisedFeed = 0;
+	int timeInterval = 3; //hours
+	int lastFeedingTime = 7;
+	int currentTime = 8;
 };

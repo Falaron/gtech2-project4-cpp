@@ -1,5 +1,6 @@
 #include "window.hpp"
 #include <iostream>
+#include <string>
 using namespace std;
 
 Window::Window(const char* WindowName, int Width, int Height) {
@@ -30,6 +31,8 @@ Window::Window(const char* WindowName, int Width, int Height) {
         cout << "Failed to load font: " << TTF_GetError() << endl;
     }
     color = { 255, 255, 255 };
+    //Input TTF
+    SDL_StartTextInput();
 
 
     //Create window
@@ -50,8 +53,12 @@ Window::Window(const char* WindowName, int Width, int Height) {
     }
     SDL_RenderClear(renderer);
 
-    //Input TTF
-    SDL_StartTextInput();
+
+    //Init SDL_Image
+    if (IMG_Init(IMG_INIT_PNG) == 0) {
+        cout << "Error SDL2_image Initialization" << endl;
+        return;
+    }
 
     return;
 }
@@ -86,8 +93,13 @@ int Window::Refresh() {
     return 1;
 }
 
-SDL_Renderer** Window::GetRenderer() {
-    return &renderer;
+SDL_Window* Window::GetSDLWindow()
+{
+    return window;
+}
+
+SDL_Renderer* Window::GetRenderer() {
+    return renderer;
 }
 
 int Window::DrawText(const char* text, int positionX, int positionY) {
@@ -95,6 +107,8 @@ int Window::DrawText(const char* text, int positionX, int positionY) {
     texture = SDL_CreateTextureFromSurface(renderer, surface);
     SDL_Rect textRect = { positionX, positionY, surface->w, surface->h};
     SDL_RenderCopy(renderer, texture, NULL, &textRect);
+    SDL_FreeSurface(surface);
+    SDL_DestroyTexture(texture);
     return  1;
 }
 
@@ -117,5 +131,18 @@ int Window::Input() {
             }
         }
     }
+    return 1;
+}
+
+int Window::showImage(const char* img_name, int positionX, int positionY, int width, int height) {
+    SDL_Surface* logoSurface = IMG_Load(img_name);
+    SDL_Texture* logoTexture = SDL_CreateTextureFromSurface(renderer, logoSurface);
+    SDL_FreeSurface(logoSurface);
+
+    SDL_RenderClear(renderer);
+    SDL_Rect imgRect = { positionX, positionY, width, height };
+    SDL_RenderCopy(renderer, logoTexture, NULL, &imgRect);
+    SDL_RenderPresent(renderer);
+
     return 1;
 }

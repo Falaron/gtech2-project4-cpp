@@ -1,16 +1,66 @@
 #include "window.hpp"
 #include <iostream>
+#include "View.hpp"
+#include "Button.hpp"
+#include "Widget.hpp"
+#include "ViewManager.cpp"
 using namespace std;
+
+
+
+
+void heloo()
+{
+    currentView = viewFeed;
+}
 
 int main(int argc, char* argv[])
 {
     //Init Window
+
     Window* main_window = new Window("Baby", 360, 611);
+
+
+    //init main view
+    View *viewMain = new View(main_window->GetSDLWindow(), main_window->GetRenderer());
+    viewMain->setFont(main_window->font);
+    Button* button1 = new Button("PageMain");
+    button1->setOnClickCallback(heloo);
+    viewMain->addWidget(button1);
+
+    //init view Feed
+    viewFeed = new View(main_window->GetSDLWindow(), main_window->GetRenderer());
+    viewFeed->setFont(main_window->font);
+    Button* button2 = new Button("PageFeed");
+    viewFeed->addWidget(button2);
+
+    //init view Regurgited
+    View* viewRegurgited = new View(main_window->GetSDLWindow(), main_window->GetRenderer());
+    viewRegurgited->setFont(main_window->font);
+    Button* button3 = new Button("PageRegurgited");
+    viewRegurgited->addWidget(button3);
+
+    //init view Settings
+    View* viewSettings = new View(main_window->GetSDLWindow(), main_window->GetRenderer());
+    viewSettings->setFont(main_window->font);
+    Button* button4 = new Button("PageSettings");
+    viewSettings->addWidget(button4);
+
+    //init view Shop
+    View* viewShop = new View(main_window->GetSDLWindow(), main_window->GetRenderer());
+    viewShop->setFont(main_window->font);
+    Button* button5 = new Button("PageShop");
+    viewShop->addWidget(button5);
+
+
+    currentView = viewMain;
+    
+
+    //Widget* footer = new Widget();
+
 
     while (main_window->closeRequest == 0) {
         main_window->frame_time_start = SDL_GetTicks();
-
-        SDL_PollEvent(&main_window->event);
 
         main_window->frame_time = SDL_GetTicks() - main_window->frame_time_start;
 
@@ -20,6 +70,8 @@ int main(int argc, char* argv[])
                 main_window->closeRequest = 1;
                 break;
             }
+
+            currentView->handleEvent(main_window->event);
         }
 
         if (main_window->frame_time < main_window->frame_rate)
@@ -27,9 +79,16 @@ int main(int argc, char* argv[])
             if (main_window->frameSlower >= 12) {
 
                 //Stuff in frame
-                main_window->DrawText("Hello 1", 10, 10);
-                main_window->DrawText("Hello 2", main_window->winWidth/2-40, 50);
-                //main_window->Input();
+
+                currentView->render();
+
+                
+               
+               // main_window->showImage("img/logo.png",main_window->winWidth/2-40,7,83,32);
+
+                
+                main_window->CheckKeys();
+
                 main_window->Refresh();
                 main_window->frameSlower = 0;
             }
@@ -37,5 +96,21 @@ int main(int argc, char* argv[])
             SDL_Delay(main_window->frame_rate - main_window->frame_time);
         }
     }
+        // Free the memory
+        delete viewMain;
+        viewMain = 0;
+
+        delete viewFeed;
+        viewFeed = 0;
+
+        delete viewSettings;
+        viewSettings= 0;
+
+        delete viewShop;
+        viewShop = 0;
+
+        delete viewRegurgited;
+        viewRegurgited = 0;
+
     return main_window->Destroy();
 }

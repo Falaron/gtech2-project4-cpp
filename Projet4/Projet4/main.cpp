@@ -3,15 +3,15 @@
 #include "View.hpp"
 #include "Button.hpp"
 #include "Widget.hpp"
+#include "ViewManager.cpp"
 using namespace std;
 
 
 
-View* currentView;
 
 void heloo()
 {
-    cout << "HELLOOOOOOOO" << endl;
+    currentView = viewFeed;
 }
 
 int main(int argc, char* argv[])
@@ -29,7 +29,7 @@ int main(int argc, char* argv[])
     viewMain->addWidget(button1);
 
     //init view Feed
-    View* viewFeed = new View(main_window->GetSDLWindow(), main_window->GetRenderer());
+    viewFeed = new View(main_window->GetSDLWindow(), main_window->GetRenderer());
     viewFeed->setFont(main_window->font);
     Button* button2 = new Button("PageFeed");
     viewFeed->addWidget(button2);
@@ -53,7 +53,7 @@ int main(int argc, char* argv[])
     viewShop->addWidget(button5);
 
 
-    currentView = viewFeed;
+    currentView = viewMain;
     
 
     //Widget* footer = new Widget();

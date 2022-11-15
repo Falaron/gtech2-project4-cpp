@@ -142,6 +142,7 @@
     <ClCompile Include="View.cpp" />
     <ClCompile Include="Widget.cpp" />
     <ClCompile Include="window.cpp" />
+    <ClCompile Include="ViewManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bottle.hpp" />

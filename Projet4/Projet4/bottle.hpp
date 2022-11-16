@@ -20,6 +20,7 @@ public:
 	int GetBabyQuantity();
 	int GetFeedIntervalH();
 	int GetFeedIntervalM();
+	int GetFeedTimeLeftH();
 
 private:
 	int bottleVolume = 250;
@@ -39,4 +40,5 @@ private:
 	int lastFeedingTimeM = 30;//time when last fed in minutes 
 	int currentTimeH = ltm->tm_hour; //computer's hours
 	int currentTimeM = ltm->tm_min;  //computer's minutes
+	int feedTimeLeftH = 3 ; //TODO
 };

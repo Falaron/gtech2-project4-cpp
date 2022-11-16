@@ -166,7 +166,7 @@ int main(int argc, char* argv[])
         viewMain->addWidget(feedTimeText);
         //Adding text content variable
         Text* currentTime = new Text();
-        string sCurrentTime = to_string(bottle.GetFeedInterval()) + " h";
+        string sCurrentTime = to_string(bottle.GetFeedIntervalH()) + " h";
         char const* pCurrentTime = sCurrentTime.c_str();
         currentTime->setText(pCurrentTime);
         currentTime->setColor(255, 255, 255);
@@ -267,7 +267,7 @@ int main(int argc, char* argv[])
         viewMain->addWidget(feedTimeLeft);
         //Adding text content variable
         Text* currentTime2 = new Text();
-        string sCurrentTime2 = to_string(bottle.GetCurrentTime()) + " h";
+        string sCurrentTime2 = to_string(bottle.GetFeedTimeLeftH()) + " h";
         char const* pCurrentTime2 = sCurrentTime2.c_str();
         currentTime2->setText(pCurrentTime2);
         currentTime2->setColor(255, 255, 255);

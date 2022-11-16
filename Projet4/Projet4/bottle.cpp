@@ -66,3 +66,7 @@ int Bottle::GetFeedIntervalH() {
 int Bottle::GetFeedIntervalM() {
 	return timeIntervalM;
 }
+
+int Bottle::GetFeedTimeLeftH() {
+	return feedTimeLeftH;
+}

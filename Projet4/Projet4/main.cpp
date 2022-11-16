@@ -469,15 +469,8 @@ int main(int argc, char* argv[])
     //    buttonRegurgited->setOnClickCallback(goToFeed);
     //    viewRegurgited->addWidget(buttonRegurgited);
     //}
-
-
-
-
+	
     currentView = viewMain;
-
-
-
-
 
     while (main_window->closeRequest == 0) {
         main_window->frame_time_start = SDL_GetTicks();

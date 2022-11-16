@@ -16,6 +16,7 @@ public:
 	int GetBottleVolume();
 	int GetCurrentTime();
 	int GetBabyQuantity();
+	int GetFeedInterval();
 
 private:
 	int bottleVolume = 250;

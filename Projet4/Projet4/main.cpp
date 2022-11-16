@@ -3,11 +3,10 @@
 #include "View.hpp"
 #include "Button.hpp"
 #include "Widget.hpp"
+#include "Image.hpp"
 #include "ViewManager.cpp"
 #include "Box.h"
 using namespace std;
-
-
 
 
 void goToFeed()
@@ -62,23 +61,23 @@ int main(int argc, char* argv[])
     header->setSize(main_window->winWidth, 45);
     viewMain->addWidget(header);
 
-    Button* Logo = new Button("Logo");
-    Logo->setOnClickCallback(goToMain);
-    Logo->setSize(75, 35);
-    Logo->setPosition(145, 5);
-    viewMain->addWidget(Logo);
+    Image* imageLogo = new Image("img/logo.png");
+    imageLogo->setOnClickCallback(goToMain);
+    imageLogo->setSize(83, 32);
+    imageLogo->setPosition(main_window->winWidth/2-40, 5);
+    viewMain->addWidget(imageLogo);
 
-    Button* buttonShop = new Button("L");
-    buttonShop->setOnClickCallback(goToShop);
-    buttonShop->setSize(30, 30);
-    buttonShop->setPosition(290, 7);
-    viewMain->addWidget(buttonShop);
+    Image* imageShop = new Image("img/todo.png");
+    imageShop->setOnClickCallback(goToShop);
+    imageShop->setSize(30, 30);
+    imageShop->setPosition(290, 7);
+    viewMain->addWidget(imageShop);
 	
-    Button* buttonSettings = new Button("O");
-    buttonSettings->setOnClickCallback(goToSettings);
-    buttonSettings->setSize(30, 30);
-    buttonSettings->setPosition(325, 7);
-    viewMain->addWidget(buttonSettings);
+    Image* imageSettings = new Image("img/settings.png");
+    imageSettings->setOnClickCallback(goToSettings);
+    imageSettings->setSize(30, 30);
+    imageSettings->setPosition(325, 7);
+    viewMain->addWidget(imageSettings);
 
     Box* footer = new Box();
     footer->setColor(80, 80, 80);
@@ -86,15 +85,15 @@ int main(int argc, char* argv[])
     footer->setPosition(0, 566);
     viewMain->addWidget(footer);
 
-    Button* BabyNCo = new Button("Baby+");
-    BabyNCo->setSize(75, 35);
-    BabyNCo->setPosition(5, 571);
-    viewMain->addWidget(BabyNCo);
+    Image* imageLogoFooter = new Image("img/logo_footer.png");
+    imageLogoFooter->setSize(110, 23);
+    imageLogoFooter->setPosition(5, 571);
+    viewMain->addWidget(imageLogoFooter);
 
-    Button* GreyBird = new Button("GreyBird");
-    GreyBird->setSize(75, 35);
-    GreyBird->setPosition(280, 571);
-    viewMain->addWidget(GreyBird);
+    Image* imageCreators = new Image("img/creators.png");
+    imageCreators->setSize(93, 26);
+    imageCreators->setPosition(250, 571);
+    viewMain->addWidget(imageCreators);
 
 
 

@@ -38,8 +38,8 @@ void Box::render(SDL_Renderer* renderer)
 	rect.w -= BORDER_SIZE * 2;
 	rect.h -= BORDER_SIZE * 2;
 
-	SDL_SetRenderDrawColor(renderer, color.getR(), color.getG(), color.getB(), 0xFF);
-	SDL_RenderFillRect(renderer, &rect);
+	/*SDL_SetRenderDrawColor(renderer, color.getR(), color.getG(), color.getB(), 0xFF);
+	SDL_RenderFillRect(renderer, &rect);*/
 
 
 }

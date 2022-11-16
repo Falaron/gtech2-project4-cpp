@@ -3,11 +3,10 @@
 #include "View.hpp"
 #include "Button.hpp"
 #include "Widget.hpp"
+#include "Image.hpp"
 #include "ViewManager.hpp"
 #include "Box.h"
 using namespace std;
-
-
 
 
 void goToFeed()
@@ -17,6 +16,7 @@ void goToFeed()
 
 void goToSettings()
 {
+	cout << "Settings" << endl;
 	currentView = viewSettings;
 }
 
@@ -32,6 +32,7 @@ void goToShop()
 
 void goToMain()
 {
+	cout << "Main" << endl;
 	currentView = viewMain;
 }
 
@@ -55,30 +56,32 @@ int main(int argc, char* argv[])
 	GLOBALE->setPosition(0, 0);
 	GLOBALE->setSize(main_window->winWidth, main_window->winHeight);
 	viewMain->addWidget(GLOBALE);
+	
 
 
     Box* header = new Box();
 	header->setColor(15, 15, 15);  
     header->setSize(main_window->winWidth, 45);
     viewMain->addWidget(header);
-
-    Button* Logo = new Button("Logo");
-    Logo->setOnClickCallback(goToMain);
-    Logo->setSize(75, 35);
-    Logo->setPosition(145, 5);
-    viewMain->addWidget(Logo);
-
-    Button* buttonShop = new Button("L");
-    buttonShop->setOnClickCallback(goToShop);
-    buttonShop->setSize(30, 30);
-    buttonShop->setPosition(290, 7);
-    viewMain->addWidget(buttonShop);
 	
-    Button* buttonSettings = new Button("O");
-    buttonSettings->setOnClickCallback(goToSettings);
-    buttonSettings->setSize(30, 30);
-    buttonSettings->setPosition(325, 7);
-    viewMain->addWidget(buttonSettings);
+    Image* imageLogo = new Image("img/logo.png");
+    imageLogo->setOnClickCallback(goToMain);
+    imageLogo->setSize(83, 32);
+    imageLogo->setPosition(main_window->winWidth/2-40, 5);
+    viewMain->addWidget(imageLogo);
+
+    Image* imageShop = new Image("img/todo.png");
+	imageShop->setOnClickCallback(goToShop);
+    imageShop->setSize(30, 30);
+    imageShop->setPosition(290, 7);
+    viewMain->addWidget(imageShop);
+	
+    Image* imageSettings = new Image("img/settings.png");
+    imageSettings->setSize(30, 30);
+    imageSettings->setPosition(325, 7);
+    imageSettings->setOnClickCallback(goToSettings);
+    viewMain->addWidget(imageSettings);
+    
 
     Box* footer = new Box();
     footer->setColor(15, 15, 15);
@@ -86,15 +89,15 @@ int main(int argc, char* argv[])
     footer->setPosition(0, 566);
     viewMain->addWidget(footer);
 
-    Button* BabyNCo = new Button("Baby+");
-    BabyNCo->setSize(75, 35);
-    BabyNCo->setPosition(5, 571);
-    viewMain->addWidget(BabyNCo);
+    Image* imageLogoFooter = new Image("img/logo_footer.png");
+    imageLogoFooter->setSize(110, 23);
+    imageLogoFooter->setPosition(5, 571);
+    viewMain->addWidget(imageLogoFooter);
 
-    Button* GreyBird = new Button("GreyBird");
-    GreyBird->setSize(75, 35);
-    GreyBird->setPosition(280, 571);
-    viewMain->addWidget(GreyBird);
+    Image* imageCreators = new Image("img/creators.png");
+    imageCreators->setSize(93, 26);
+    imageCreators->setPosition(250, 571);
+    viewMain->addWidget(imageCreators);
 
 
     //Center
@@ -155,36 +158,41 @@ int main(int argc, char* argv[])
 
 
     //init view Feed
-    View *viewFeed = new View(main_window->GetSDLWindow(), main_window->GetRenderer());
+    viewFeed = new View(main_window->GetSDLWindow(), main_window->GetRenderer());
     viewFeed->setFont(main_window->font);
-    //viewFeed->addWidget(GLOBALE);
+    viewFeed->addWidget(GLOBALE);
     Button* button2 = new Button("PageFeed");
+	button2->setSize(100, 20);
+	button2->setPosition(100, 100);
     button2->setOnClickCallback(goToMain);
+    viewFeed->addWidget(imageSettings);
+    viewFeed->addWidget(buttonFeed);
     viewFeed->addWidget(button2);
 
     //init view Regurgited
-    View *viewRegurgited = new View(main_window->GetSDLWindow(), main_window->GetRenderer());
+    viewRegurgited = new View(main_window->GetSDLWindow(), main_window->GetRenderer());
     viewRegurgited->setFont(main_window->font);
-    //viewRegurgited->addWidget(GLOBALE);
+    viewRegurgited->addWidget(GLOBALE);
     Button* button3 = new Button("PageRegurgited");
     viewRegurgited->addWidget(button3);
 
     //init view Settings
-    View *viewSettings = new View(main_window->GetSDLWindow(), main_window->GetRenderer());
+    viewSettings = new View(main_window->GetSDLWindow(), main_window->GetRenderer());
     viewSettings->setFont(main_window->font);
-    //viewSettings->addWidget(GLOBALE);
+    viewSettings->addWidget(GLOBALE);
     Button* button4 = new Button("PageSettings");
     viewSettings->addWidget(button4);
+	button4->setOnClickCallback(goToMain);
 
     //init view Shop
-    View *viewShop = new View(main_window->GetSDLWindow(), main_window->GetRenderer());
+    viewShop = new View(main_window->GetSDLWindow(), main_window->GetRenderer());
     viewShop->setFont(main_window->font);
-    //viewShop->addWidget(GLOBALE);
+    viewShop->addWidget(GLOBALE);
     Button* button5 = new Button("PageShop");
     viewShop->addWidget(button5);
 
 
-    currentView = viewFeed;
+    currentView = viewMain;
     
 
     

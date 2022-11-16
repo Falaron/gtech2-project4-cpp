@@ -68,6 +68,11 @@ protected:
 	int width;
 	int height;
 
+		/// Temporary R G B color.
+	int tempR;
+	int tempG;
+	int tempB;
+
 		/// The background color of this widget.
 		/// default = 0xFFFFFF (white)
 	Color color;

@@ -137,7 +137,7 @@
     <ClCompile Include="Box.cpp" />
     <ClCompile Include="Button.cpp" />
     <ClCompile Include="Color.cpp" />
-    <ClCompile Include="ImageLoader.cpp" />
+    <ClCompile Include="Image.cpp" />
     <ClCompile Include="List.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Text.cpp" />
@@ -151,7 +151,7 @@
     <ClInclude Include="Box.h" />
     <ClInclude Include="Button.hpp" />
     <ClInclude Include="Color.hpp" />
-    <ClInclude Include="ImageLoader.hpp" />
+    <ClInclude Include="Image.hpp" />
     <ClInclude Include="List.h" />
     <ClInclude Include="Text.hpp" />
     <ClInclude Include="View.hpp" />

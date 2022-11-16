@@ -26,7 +26,7 @@ Window::Window(const char* WindowName, int Width, int Height) {
         return;
     }
 
-    font = TTF_OpenFont("font/barlow.ttf", 25);
+    font = TTF_OpenFont("font/barlow.ttf", 16);
     if (!font) {
         cout << "Failed to load font: " << TTF_GetError() << endl;
     }

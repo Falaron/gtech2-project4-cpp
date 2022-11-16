@@ -23,8 +23,12 @@ public:
 	virtual void onAddToView(View* v) override;
 
 	virtual void onMouseClick() override;
+<<<<<<< HEAD
 	virtual void onMouseHover() override;
 	virtual void onMouseUnhover() override;
+=======
+
+>>>>>>> c7aa9c055fe185227c88ca4c131f59cc3ce22b4e
 	void setOnClickCallback(void (*c)()) { onClickCallback = c; }
 
 

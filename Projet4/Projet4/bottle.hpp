@@ -12,15 +12,20 @@ public:
 	void Print(); //print informations
 	//void Input(/* element by element */);
 
+	int GetBottleQuantity();
+	int GetBottleVolume();
+	int GetCurrentTime();
+	int GetBabyQuantity();
+	int GetFeedInterval();
+
 private:
-	int bottleVolume = 100;
+	int bottleVolume = 250;
 	int bottleQuantity = bottleVolume;
-	int max_quantity = 15;
-	int min_quantity = 10;
+	int quantityToGive = 135;
 	int quantityFed = 0;
 
 	int improvisedFeed = 0;
 	int timeInterval = 3; //hours
 	int lastFeedingTime = 7;
-	int currentTime = 8;
+	int currentTime = timeInterval;
 };

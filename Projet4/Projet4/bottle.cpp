@@ -38,3 +38,23 @@ void Bottle::Regurgited() {
 	cout << "when will you feed your baby ?" << endl;
 	cin >> improvisedFeed; 
 }
+
+int Bottle::GetBottleQuantity() {
+	return bottleQuantity;
+}
+
+int Bottle::GetBottleVolume() {
+	return bottleVolume;
+}
+
+int Bottle::GetCurrentTime() {
+	return currentTime;
+}
+
+int Bottle::GetBabyQuantity() {
+	return quantityToGive;
+}
+
+int Bottle::GetFeedInterval() {
+	return timeInterval;
+}

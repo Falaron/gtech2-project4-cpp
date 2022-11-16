@@ -54,11 +54,11 @@ int main(int argc, char* argv[])
 	GLOBALE->setColor(49, 49, 49);
 	GLOBALE->setPosition(0, 0);
 	GLOBALE->setSize(main_window->winWidth, main_window->winHeight);
-	//viewMain->addWidget(GLOBALE);
+	viewMain->addWidget(GLOBALE);
 
 
     Box* header = new Box();
-	header->setColor(80, 80, 80);  
+	header->setColor(15, 15, 15);  
     header->setSize(main_window->winWidth, 45);
     viewMain->addWidget(header);
 
@@ -81,7 +81,7 @@ int main(int argc, char* argv[])
     viewMain->addWidget(buttonSettings);
 
     Box* footer = new Box();
-    footer->setColor(80, 80, 80);
+    footer->setColor(15, 15, 15);
     footer->setSize(main_window->winWidth, 45);
     footer->setPosition(0, 566);
     viewMain->addWidget(footer);
@@ -101,12 +101,13 @@ int main(int argc, char* argv[])
     Box* infoPanelBig = new Box();
     infoPanelBig->setSize(340, 180);
     infoPanelBig->setPosition(10, 65);
-    infoPanelBig->setColor(49, 49, 49);
+    infoPanelBig->setColor(15, 15, 15);
     viewMain->addWidget(infoPanelBig);
 
     Box* infoPanelMid = new Box();
     infoPanelMid->setSize(340, 140);
     infoPanelMid->setPosition(10, 85);
+    infoPanelMid->setColor(21, 21, 21);
     viewMain->addWidget(infoPanelMid);
 
 
@@ -114,12 +115,13 @@ int main(int argc, char* argv[])
     Box* panelBigRefill = new Box();
     panelBigRefill->setSize(340, 140);
     panelBigRefill->setPosition(10, 260);
-    panelBigRefill->setColor(49, 49, 49);
+    panelBigRefill->setColor(15, 15, 15);
     viewMain->addWidget(panelBigRefill);
 
     Box* panelMidRefill = new Box();
     panelMidRefill->setSize(340, 100);
     panelMidRefill->setPosition(10, 280);
+    panelMidRefill->setColor(21, 21, 21);
     viewMain->addWidget(panelMidRefill);
 
     Button* buttonRefill = new Button("refill");
@@ -134,12 +136,13 @@ int main(int argc, char* argv[])
     Box* panelBigFeed = new Box();
     panelBigFeed->setSize(340, 140);
     panelBigFeed->setPosition(10, 410);
-    panelBigFeed->setColor(49, 49, 49);
+    panelBigFeed->setColor(15, 15, 15);
     viewMain->addWidget(panelBigFeed);
 
     Box* panelMidFeed = new Box();
     panelMidFeed->setSize(340, 100);
     panelMidFeed->setPosition(10, 430);
+    panelMidFeed->setColor(21, 21, 21);
     viewMain->addWidget(panelMidFeed);
 
     Button* buttonFeed = new Button("Feed Arthur");

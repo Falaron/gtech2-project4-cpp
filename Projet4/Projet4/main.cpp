@@ -3,7 +3,7 @@
 #include "View.hpp"
 #include "Button.hpp"
 #include "Widget.hpp"
-#include "ViewManager.cpp"
+#include "ViewManager.hpp"
 #include "Box.h"
 using namespace std;
 
@@ -46,7 +46,7 @@ int main(int argc, char* argv[])
 
 
     //init main view
-    View *viewMain = new View(main_window->GetSDLWindow(), main_window->GetRenderer());
+    viewMain = new View(main_window->GetSDLWindow(), main_window->GetRenderer());
     viewMain->setFont(main_window->font);
 
     Box* GLOBALE = new Box();
@@ -97,13 +97,13 @@ int main(int argc, char* argv[])
     viewMain->addWidget(GreyBird);
 
 
-
+    //Center
     Box* infoPanelBig = new Box();
     infoPanelBig->setSize(340, 180);
     infoPanelBig->setPosition(10, 65);
     infoPanelBig->setColor(15, 15, 15);
     viewMain->addWidget(infoPanelBig);
-
+    //Border
     Box* infoPanelMid = new Box();
     infoPanelMid->setSize(340, 140);
     infoPanelMid->setPosition(10, 85);
@@ -111,13 +111,13 @@ int main(int argc, char* argv[])
     viewMain->addWidget(infoPanelMid);
 
 
-
+    //Center
     Box* panelBigRefill = new Box();
     panelBigRefill->setSize(340, 140);
     panelBigRefill->setPosition(10, 260);
     panelBigRefill->setColor(15, 15, 15);
     viewMain->addWidget(panelBigRefill);
-
+    //Border
     Box* panelMidRefill = new Box();
     panelMidRefill->setSize(340, 100);
     panelMidRefill->setPosition(10, 280);
@@ -132,13 +132,13 @@ int main(int argc, char* argv[])
     viewMain->addWidget(buttonRefill);
 
 
-
+    //Center
     Box* panelBigFeed = new Box();
     panelBigFeed->setSize(340, 140);
     panelBigFeed->setPosition(10, 410);
     panelBigFeed->setColor(15, 15, 15);
     viewMain->addWidget(panelBigFeed);
-
+    //Border
     Box* panelMidFeed = new Box();
     panelMidFeed->setSize(340, 100);
     panelMidFeed->setPosition(10, 430);
@@ -184,7 +184,7 @@ int main(int argc, char* argv[])
     viewShop->addWidget(button5);
 
 
-    currentView = viewMain;
+    currentView = viewFeed;
     
 
     

@@ -9,6 +9,7 @@
 #include "Box.h"
 #include "bottle.hpp"
 #include "string"
+#include "List.h"
 using namespace std;
 
 
@@ -41,6 +42,7 @@ int main(int argc, char* argv[])
 {
     //Init Window
     Bottle bottle;
+    List list;
 
     Window* main_window = new Window("Baby", 360, 611);
     /*SDL_SetRenderDrawColor(main_window->GetRenderer(), 49, 49, 49, SDL_ALPHA_OPAQUE);*/

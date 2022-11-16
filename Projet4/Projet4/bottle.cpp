@@ -54,3 +54,7 @@ int Bottle::GetCurrentTime() {
 int Bottle::GetBabyQuantity() {
 	return quantityToGive;
 }
+
+int Bottle::GetFeedInterval() {
+	return timeInterval;
+}

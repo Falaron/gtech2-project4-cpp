@@ -1,13 +1,1 @@
-<<<<<<< HEAD
-﻿  main.cpp
-C:\Users\Orrigine\source\repos\gtech2-project4-cpp\Projet4\Projet4\View.hpp(11,24): warning C4091: 'typedef ' : ignoré à gauche de 'SDL_Event' quand aucune variable n'est déclarée
-C:\Users\Orrigine\source\repos\gtech2-project4-cpp\Projet4\Projet4\Widget.hpp(9,24): warning C4091: 'typedef ' : ignoré à gauche de 'SDL_Event' quand aucune variable n'est déclarée
-  Projet4.vcxproj -> C:\Users\Orrigine\source\repos\gtech2-project4-cpp\Projet4\x64\Debug\Projet4.exe
-=======
-﻿  bottle.cpp
-  main.cpp
-C:\Users\arthurjouve\Documents\GitHub\gtech2-project4-cpp\Projet4\Projet4\View.hpp(11,24): warning C4091: 'typedef ' : ignoré à gauche de 'SDL_Event' quand aucune variable n'est déclarée
-C:\Users\arthurjouve\Documents\GitHub\gtech2-project4-cpp\Projet4\Projet4\Widget.hpp(9,24): warning C4091: 'typedef ' : ignoré à gauche de 'SDL_Event' quand aucune variable n'est déclarée
-  Génération de code en cours...
-  Projet4.vcxproj -> C:\Users\arthurjouve\Documents\GitHub\gtech2-project4-cpp\Projet4\x64\Debug\Projet4.exe
->>>>>>> c7aa9c055fe185227c88ca4c131f59cc3ce22b4e
+﻿  Projet4.vcxproj -> C:\Users\Orrigine\source\repos\gtech2-project4-cpp\Projet4\x64\Debug\Projet4.exe

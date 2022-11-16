@@ -39,24 +39,9 @@ void Image::onAddToView(View* v)
 	SDL_FreeSurface(logoSurface);
 }
 
-<<<<<<< HEAD
-void Image::onMouseHover()
-{
-	this->setColor(0, 127, 255);
-}
-
-void Image::onMouseUnhover()
-{
-	this->setColor(80, 80, 80);
-}
 
 void Image::onMouseClick()
 {
-	this->setColor(220, 220, 220);
-=======
-void Image::onMouseClick()
-{
->>>>>>> c7aa9c055fe185227c88ca4c131f59cc3ce22b4e
 	if (this->onClickCallback)
 		this->onClickCallback();
 }

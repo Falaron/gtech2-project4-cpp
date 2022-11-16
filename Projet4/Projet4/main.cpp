@@ -4,10 +4,7 @@
 #include "Button.hpp"
 #include "Widget.hpp"
 #include "Image.hpp"
-<<<<<<< HEAD
-=======
 #include "Text.hpp"
->>>>>>> c7aa9c055fe185227c88ca4c131f59cc3ce22b4e
 #include "ViewManager.hpp"
 #include "Box.h"
 #include "bottle.hpp"
@@ -22,24 +19,22 @@ void goToFeed()
 
 void goToSettings()
 {
-	cout << "Settings" << endl;
-	currentView = viewSettings;
+    currentView = viewSettings;
 }
 
 void goToRegurgited()
 {
-	currentView = viewRegurgited;
+    currentView = viewRegurgited;
 }
 
 void goToShop()
 {
-	currentView = viewShop;
+    currentView = viewShop;
 }
 
 void goToMain()
 {
-	cout << "Main" << endl;
-	currentView = viewMain;
+    currentView = viewMain;
 }
 
 int main(int argc, char* argv[])
@@ -55,119 +50,20 @@ int main(int argc, char* argv[])
 
     //init main view
     viewMain = new View(main_window->GetSDLWindow(), main_window->GetRenderer());
+    viewFeed = new View(main_window->GetSDLWindow(), main_window->GetRenderer());
+    viewSettings = new View(main_window->GetSDLWindow(), main_window->GetRenderer());
+    viewShop = new View(main_window->GetSDLWindow(), main_window->GetRenderer());
+    viewRegurgited = new View(main_window->GetSDLWindow(), main_window->GetRenderer());
     viewMain->setFont(main_window->font);
 
     Box* GLOBALE = new Box();
-	
-	GLOBALE->setColor(49, 49, 49);
-	GLOBALE->setPosition(0, 0);
-	GLOBALE->setSize(main_window->winWidth, main_window->winHeight);
-	viewMain->addWidget(GLOBALE);
-	
+
+    GLOBALE->setColor(49, 49, 49);
+    GLOBALE->setPosition(0, 0);
+    GLOBALE->setSize(main_window->winWidth, main_window->winHeight);
+    viewMain->addWidget(GLOBALE);
 
 
-<<<<<<< HEAD
-    Box* header = new Box();
-	header->setColor(15, 15, 15);  
-    header->setSize(main_window->winWidth, 45);
-    viewMain->addWidget(header);
-	
-    Image* imageLogo = new Image("img/logo.png");
-    imageLogo->setOnClickCallback(goToMain);
-    imageLogo->setSize(83, 32);
-    imageLogo->setPosition(main_window->winWidth/2-40, 5);
-    viewMain->addWidget(imageLogo);
-
-    Image* imageShop = new Image("img/todo.png");
-	imageShop->setOnClickCallback(goToShop);
-    imageShop->setSize(30, 30);
-    imageShop->setPosition(290, 7);
-    viewMain->addWidget(imageShop);
-	
-    Image* imageSettings = new Image("img/settings.png");
-    imageSettings->setSize(30, 30);
-    imageSettings->setPosition(325, 7);
-    imageSettings->setOnClickCallback(goToSettings);
-    viewMain->addWidget(imageSettings);
-    
-
-    Box* footer = new Box();
-    footer->setColor(15, 15, 15);
-    footer->setSize(main_window->winWidth, 45);
-    footer->setPosition(0, 566);
-    viewMain->addWidget(footer);
-
-    Image* imageLogoFooter = new Image("img/logo_footer.png");
-    imageLogoFooter->setSize(110, 23);
-    imageLogoFooter->setPosition(5, 571);
-    viewMain->addWidget(imageLogoFooter);
-
-    Image* imageCreators = new Image("img/creators.png");
-    imageCreators->setSize(93, 26);
-    imageCreators->setPosition(250, 571);
-    viewMain->addWidget(imageCreators);
-
-
-    //Center
-    Box* infoPanelBig = new Box();
-    infoPanelBig->setSize(340, 180);
-    infoPanelBig->setPosition(10, 65);
-    infoPanelBig->setColor(15, 15, 15);
-    viewMain->addWidget(infoPanelBig);
-    //Border
-    Box* infoPanelMid = new Box();
-    infoPanelMid->setSize(340, 140);
-    infoPanelMid->setPosition(10, 85);
-    infoPanelMid->setColor(21, 21, 21);
-    viewMain->addWidget(infoPanelMid);
-
-
-    //Center
-    Box* panelBigRefill = new Box();
-    panelBigRefill->setSize(340, 140);
-    panelBigRefill->setPosition(10, 260);
-    panelBigRefill->setColor(15, 15, 15);
-    viewMain->addWidget(panelBigRefill);
-    //Border
-    Box* panelMidRefill = new Box();
-    panelMidRefill->setSize(340, 100);
-    panelMidRefill->setPosition(10, 280);
-    panelMidRefill->setColor(21, 21, 21);
-    viewMain->addWidget(panelMidRefill);
-
-    Button* buttonRefill = new Button("refill");
-    buttonRefill->setSize(130, 20);
-    buttonRefill->setPosition(200, 335);
-    buttonRefill->setColor(220, 20, 60);
-    //button1->setOnClickCallback();  --> refill bottle
-    viewMain->addWidget(buttonRefill);
-
-
-    //Center
-    Box* panelBigFeed = new Box();
-    panelBigFeed->setSize(340, 140);
-    panelBigFeed->setPosition(10, 410);
-    panelBigFeed->setColor(15, 15, 15);
-    viewMain->addWidget(panelBigFeed);
-    //Border
-    Box* panelMidFeed = new Box();
-    panelMidFeed->setSize(340, 100);
-    panelMidFeed->setPosition(10, 430);
-    panelMidFeed->setColor(21, 21, 21);
-    viewMain->addWidget(panelMidFeed);
-
-    Button* buttonFeed = new Button("Feed Arthur");
-    buttonFeed->setSize(130, 20);
-    buttonFeed->setPosition(200, 485);
-    buttonFeed->setColor(220, 20, 60);
-    buttonFeed->setOnClickCallback(goToFeed);
-    viewMain->addWidget(buttonFeed);
-
-
-
-    //init view Feed
-    viewFeed = new View(main_window->GetSDLWindow(), main_window->GetRenderer());
-=======
     //View HomePage
     {
         Box* header = new Box();
@@ -383,59 +279,204 @@ int main(int argc, char* argv[])
         buttonFeed->setOnClickCallback(goToFeed);
         viewMain->addWidget(buttonFeed);
     }
- 
 
-    View* viewFeed = new View(main_window->GetSDLWindow(), main_window->GetRenderer());
->>>>>>> c7aa9c055fe185227c88ca4c131f59cc3ce22b4e
-    viewFeed->setFont(main_window->font);
-    viewFeed->addWidget(GLOBALE);
-    Button* button2 = new Button("PageFeed");
-	button2->setSize(100, 20);
-	button2->setPosition(100, 100);
-    button2->setOnClickCallback(goToMain);
-    viewFeed->addWidget(imageSettings);
-    viewFeed->addWidget(buttonFeed);
-    viewFeed->addWidget(button2);
+    //View Feed
+    {
+        viewFeed->setFont(main_window->font);
+        //viewFeed->addWidget(GLOBALE);
+        Button* button2 = new Button("PageHome");
+        button2->setOnClickCallback(goToMain);
+        button2->setSize(20, 20);
+        viewFeed->addWidget(button2);
 
-    //init view Regurgited
-<<<<<<< HEAD
-    viewRegurgited = new View(main_window->GetSDLWindow(), main_window->GetRenderer());
-=======
-    View* viewRegurgited = new View(main_window->GetSDLWindow(), main_window->GetRenderer());
->>>>>>> c7aa9c055fe185227c88ca4c131f59cc3ce22b4e
-    viewRegurgited->setFont(main_window->font);
-    viewRegurgited->addWidget(GLOBALE);
-    Button* button3 = new Button("PageRegurgited");
-    viewRegurgited->addWidget(button3);
+        Box* header = new Box();
+        header->setColor(15, 15, 15);
+        header->setSize(main_window->winWidth, 45);
+        viewFeed->addWidget(header);
 
-    //init view Settings
-<<<<<<< HEAD
-    viewSettings = new View(main_window->GetSDLWindow(), main_window->GetRenderer());
-=======
-    View* viewSettings = new View(main_window->GetSDLWindow(), main_window->GetRenderer());
->>>>>>> c7aa9c055fe185227c88ca4c131f59cc3ce22b4e
-    viewSettings->setFont(main_window->font);
-    viewSettings->addWidget(GLOBALE);
-    Button* button4 = new Button("PageSettings");
-    viewSettings->addWidget(button4);
-	button4->setOnClickCallback(goToMain);
+        Image* imageBack = new Image("img/back.png");
+        imageBack->setSize(20, 20);
+        imageBack->setPosition(15, 13);
+        viewFeed->addWidget(imageBack);
 
-    //init view Shop
-<<<<<<< HEAD
-    viewShop = new View(main_window->GetSDLWindow(), main_window->GetRenderer());
-=======
-    View* viewShop = new View(main_window->GetSDLWindow(), main_window->GetRenderer());
->>>>>>> c7aa9c055fe185227c88ca4c131f59cc3ce22b4e
-    viewShop->setFont(main_window->font);
-    viewShop->addWidget(GLOBALE);
-    Button* button5 = new Button("PageShop");
-    viewShop->addWidget(button5);
+        Image* imageLogo = new Image("img/logo.png");
+        imageLogo->setOnClickCallback(goToMain);
+        imageLogo->setSize(83, 32);
+        imageLogo->setPosition(main_window->winWidth / 2 - 40, 5);
+        viewFeed->addWidget(imageLogo);
+
+        Image* imageShop = new Image("img/todo.png");
+        imageShop->setOnClickCallback(goToShop);
+        imageShop->setSize(30, 30);
+        imageShop->setPosition(280, 7);
+        viewFeed->addWidget(imageShop);
+
+        Image* imageSettings = new Image("img/settings.png");
+        imageSettings->setOnClickCallback(goToSettings);
+        imageSettings->setSize(30, 30);
+        imageSettings->setPosition(315, 7);
+        viewFeed->addWidget(imageSettings);
+
+        Box* footer = new Box();
+        footer->setColor(15, 15, 15);
+        footer->setSize(main_window->winWidth, 45);
+        footer->setPosition(0, 566);
+        viewFeed->addWidget(footer);
+
+        Image* imageLogoFooter = new Image("img/logo_footer.png");
+        imageLogoFooter->setSize(110, 23);
+        imageLogoFooter->setPosition(10, 571);
+        viewFeed->addWidget(imageLogoFooter);
+
+        Image* imageCreators = new Image("img/creators.png");
+        imageCreators->setSize(93, 26);
+        imageCreators->setPosition(250, 576);
+        viewFeed->addWidget(imageCreators);
+
+
+
+        //Center
+        Box* panelBigRefill = new Box();
+        panelBigRefill->setSize(340, 140);
+        panelBigRefill->setPosition(10, 65);
+        panelBigRefill->setColor(15, 15, 15);
+        viewFeed->addWidget(panelBigRefill);
+        //Border
+        Box* panelMidRefill = new Box();
+        panelMidRefill->setSize(340, 100);
+        panelMidRefill->setPosition(10, 85);
+        panelMidRefill->setColor(21, 21, 21);
+        viewFeed->addWidget(panelMidRefill);
+        //Adding text refill the bottle
+        Text* Title = new Text();
+        Title->setText("How much you gave to the Baby");
+        Title->setColor(255, 255, 255);
+        Title->setPosition(15, 65);
+        viewFeed->addWidget(Title);
+
+        //Center
+        Box* panel2 = new Box();
+        panel2->setSize(340, 140);
+        panel2->setPosition(10, 220);
+        panel2->setColor(15, 15, 15);
+        viewFeed->addWidget(panel2);
+        //Border
+        Box* panelMid2 = new Box();
+        panelMid2->setSize(340, 100);
+        panelMid2->setPosition(10, 240);
+        panelMid2->setColor(21, 21, 21);
+        viewFeed->addWidget(panelMid2);
+        //button regurgited
+        Button* buttonRegurgited = new Button("Baby regurgited his milk");
+        buttonRegurgited->setSize(200, 20);
+        buttonRegurgited->setPosition(80, 280);
+        buttonRegurgited->setColor(220, 20, 60);
+        buttonRegurgited->setOnClickCallback(goToFeed);
+        viewFeed->addWidget(buttonRegurgited);
+    }
+
+    ////View Regurgited
+    //{
+    //    viewRegurgited->setFont(main_window->font);
+    //    //viewFeed->addWidget(GLOBALE);
+    //    Button* button2 = new Button("PageHome");
+    //    button2->setOnClickCallback(goToMain);
+    //    button2->setSize(20, 20);
+    //    viewRegurgited->addWidget(button2);
+
+    //    Box* header = new Box();
+    //    header->setColor(15, 15, 15);
+    //    header->setSize(main_window->winWidth, 45);
+    //    viewRegurgited->addWidget(header);
+
+    //    Image* imageBack = new Image("img/back.png");
+    //    imageBack->setSize(20, 20);
+    //    imageBack->setPosition(15, 13);
+    //    viewRegurgited->addWidget(imageBack);
+
+    //    Image* imageLogo = new Image("img/logo.png");
+    //    imageLogo->setOnClickCallback(goToMain);
+    //    imageLogo->setSize(83, 32);
+    //    imageLogo->setPosition(main_window->winWidth / 2 - 40, 5);
+    //    viewRegurgited->addWidget(imageLogo);
+
+    //    Image* imageShop = new Image("img/todo.png");
+    //    imageShop->setOnClickCallback(goToShop);
+    //    imageShop->setSize(30, 30);
+    //    imageShop->setPosition(280, 7);
+    //    viewRegurgited->addWidget(imageShop);
+
+    //    Image* imageSettings = new Image("img/settings.png");
+    //    imageSettings->setOnClickCallback(goToSettings);
+    //    imageSettings->setSize(30, 30);
+    //    imageSettings->setPosition(315, 7);
+    //    viewRegurgited->addWidget(imageSettings);
+
+    //    Box* footer = new Box();
+    //    footer->setColor(15, 15, 15);
+    //    footer->setSize(main_window->winWidth, 45);
+    //    footer->setPosition(0, 566);
+    //    viewRegurgited->addWidget(footer);
+
+    //    Image* imageLogoFooter = new Image("img/logo_footer.png");
+    //    imageLogoFooter->setSize(110, 23);
+    //    imageLogoFooter->setPosition(10, 571);
+    //    viewRegurgited->addWidget(imageLogoFooter);
+
+    //    Image* imageCreators = new Image("img/creators.png");
+    //    imageCreators->setSize(93, 26);
+    //    imageCreators->setPosition(250, 576);
+    //    viewRegurgited->addWidget(imageCreators);
+
+
+
+    //    //Center
+    //    Box* panelBigRefill = new Box();
+    //    panelBigRefill->setSize(340, 140);
+    //    panelBigRefill->setPosition(10, 65);
+    //    panelBigRefill->setColor(15, 15, 15);
+    //    viewRegurgited->addWidget(panelBigRefill);
+    //    //Border
+    //    Box* panelMidRefill = new Box();
+    //    panelMidRefill->setSize(340, 100);
+    //    panelMidRefill->setPosition(10, 85);
+    //    panelMidRefill->setColor(21, 21, 21);
+    //    viewRegurgited->addWidget(panelMidRefill);
+    //    //Adding text refill the bottle
+    //    Text* Title = new Text();
+    //    Title->setText("How much Baby regugited");
+    //    Title->setColor(255, 255, 255);
+    //    Title->setPosition(15, 65);
+    //    viewRegurgited->addWidget(Title);
+
+    //    //Center
+    //    Box* panel2 = new Box();
+    //    panel2->setSize(340, 140);
+    //    panel2->setPosition(10, 220);
+    //    panel2->setColor(15, 15, 15);
+    //    viewRegurgited->addWidget(panel2);
+    //    //Border
+    //    Box* panelMid2 = new Box();
+    //    panelMid2->setSize(340, 100);
+    //    panelMid2->setPosition(10, 240);
+    //    panelMid2->setColor(21, 21, 21);
+    //    viewRegurgited->addWidget(panelMid2);
+    //    //button regurgited
+    //    Button* buttonRegurgited = new Button("Baby regurgited his milk");
+    //    buttonRegurgited->setSize(200, 20);
+    //    buttonRegurgited->setPosition(80, 280);
+    //    buttonRegurgited->setColor(220, 20, 60);
+    //    buttonRegurgited->setOnClickCallback(goToFeed);
+    //    viewRegurgited->addWidget(buttonRegurgited);
+    //}
+
+
 
 
     currentView = viewMain;
-    
 
-    
+
+
 
 
     while (main_window->closeRequest == 0) {
@@ -461,11 +502,11 @@ int main(int argc, char* argv[])
 
                 currentView->render();
 
-                
-               
-               // main_window->showImage("img/logo.png",main_window->winWidth/2-40,7,83,32);
 
-                
+
+                // main_window->showImage("img/logo.png",main_window->winWidth/2-40,7,83,32);
+
+
                 main_window->CheckKeys();
 
                 main_window->Refresh();
@@ -475,21 +516,21 @@ int main(int argc, char* argv[])
             SDL_Delay(main_window->frame_rate - main_window->frame_time);
         }
     }
-        // Free the memory
-        delete viewMain;
-        viewMain = 0;
+    // Free the memory
+    delete viewMain;
+    viewMain = 0;
 
-        delete viewFeed;
-        viewFeed = 0;
+    delete viewFeed;
+    viewFeed = 0;
 
-        delete viewSettings;
-        viewSettings = 0;
+    delete viewSettings;
+    viewSettings = 0;
 
-        delete viewShop;
-        viewShop = 0;
+    delete viewShop;
+    viewShop = 0;
 
-        delete viewRegurgited;
-        viewRegurgited = 0;
+    delete viewRegurgited;
+    viewRegurgited = 0;
 
     return main_window->Destroy();
 }

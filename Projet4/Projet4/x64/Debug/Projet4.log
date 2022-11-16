@@ -1,4 +1,30 @@
-﻿  main.cpp
+﻿  bottle.cpp
+  Box.cpp
+C:\Users\arthurjouve\Documents\GitHub\gtech2-project4-cpp\Projet4\Projet4\Widget.hpp(9,24): warning C4091: 'typedef ' : ignoré à gauche de 'SDL_Event' quand aucune variable n'est déclarée
+C:\Users\arthurjouve\Documents\GitHub\gtech2-project4-cpp\Projet4\Projet4\View.hpp(11,24): warning C4091: 'typedef ' : ignoré à gauche de 'SDL_Event' quand aucune variable n'est déclarée
+  Button.cpp
+C:\Users\arthurjouve\Documents\GitHub\gtech2-project4-cpp\Projet4\Projet4\Widget.hpp(9,24): warning C4091: 'typedef ' : ignoré à gauche de 'SDL_Event' quand aucune variable n'est déclarée
+C:\Users\arthurjouve\Documents\GitHub\gtech2-project4-cpp\Projet4\Projet4\View.hpp(11,24): warning C4091: 'typedef ' : ignoré à gauche de 'SDL_Event' quand aucune variable n'est déclarée
+  Color.cpp
+  Image.cpp
+C:\Users\arthurjouve\Documents\GitHub\gtech2-project4-cpp\Projet4\Projet4\Widget.hpp(9,24): warning C4091: 'typedef ' : ignoré à gauche de 'SDL_Event' quand aucune variable n'est déclarée
+C:\Users\arthurjouve\Documents\GitHub\gtech2-project4-cpp\Projet4\Projet4\View.hpp(11,24): warning C4091: 'typedef ' : ignoré à gauche de 'SDL_Event' quand aucune variable n'est déclarée
+  List.cpp
+  main.cpp
 C:\Users\arthurjouve\Documents\GitHub\gtech2-project4-cpp\Projet4\Projet4\View.hpp(11,24): warning C4091: 'typedef ' : ignoré à gauche de 'SDL_Event' quand aucune variable n'est déclarée
 C:\Users\arthurjouve\Documents\GitHub\gtech2-project4-cpp\Projet4\Projet4\Widget.hpp(9,24): warning C4091: 'typedef ' : ignoré à gauche de 'SDL_Event' quand aucune variable n'est déclarée
+  Text.cpp
+C:\Users\arthurjouve\Documents\GitHub\gtech2-project4-cpp\Projet4\Projet4\Widget.hpp(9,24): warning C4091: 'typedef ' : ignoré à gauche de 'SDL_Event' quand aucune variable n'est déclarée
+C:\Users\arthurjouve\Documents\GitHub\gtech2-project4-cpp\Projet4\Projet4\View.hpp(11,24): warning C4091: 'typedef ' : ignoré à gauche de 'SDL_Event' quand aucune variable n'est déclarée
+  View.cpp
+C:\Users\arthurjouve\Documents\GitHub\gtech2-project4-cpp\Projet4\Projet4\View.hpp(11,24): warning C4091: 'typedef ' : ignoré à gauche de 'SDL_Event' quand aucune variable n'est déclarée
+C:\Users\arthurjouve\Documents\GitHub\gtech2-project4-cpp\Projet4\Projet4\Widget.hpp(9,24): warning C4091: 'typedef ' : ignoré à gauche de 'SDL_Event' quand aucune variable n'est déclarée
+  Widget.cpp
+C:\Users\arthurjouve\Documents\GitHub\gtech2-project4-cpp\Projet4\Projet4\Widget.hpp(9,24): warning C4091: 'typedef ' : ignoré à gauche de 'SDL_Event' quand aucune variable n'est déclarée
+C:\Users\arthurjouve\Documents\GitHub\gtech2-project4-cpp\Projet4\Projet4\View.hpp(11,24): warning C4091: 'typedef ' : ignoré à gauche de 'SDL_Event' quand aucune variable n'est déclarée
+  window.cpp
+  ViewManager.cpp
+C:\Users\arthurjouve\Documents\GitHub\gtech2-project4-cpp\Projet4\Projet4\View.hpp(11,24): warning C4091: 'typedef ' : ignoré à gauche de 'SDL_Event' quand aucune variable n'est déclarée
+  Génération de code en cours...
+C:\Users\arthurjouve\Documents\GitHub\gtech2-project4-cpp\Projet4\Projet4\List.cpp(21): warning C4715: 'List::getEmptyListPosition' : les chemins de contrôle ne retournent pas tous une valeur
   Projet4.vcxproj -> C:\Users\arthurjouve\Documents\GitHub\gtech2-project4-cpp\Projet4\x64\Debug\Projet4.exe

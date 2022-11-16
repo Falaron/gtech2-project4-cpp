@@ -24,6 +24,9 @@ public:
 
 	virtual void onMouseClick() override;
 
+	/*virtual void onMouseHover() override;
+	virtual void onMouseUnhover() override;*/
+
 	void setOnClickCallback(void (*c)()) { onClickCallback = c; }
 
 

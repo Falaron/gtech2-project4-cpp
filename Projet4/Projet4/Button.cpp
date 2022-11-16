@@ -4,6 +4,8 @@
 
 #include <SDL.h>
 #include <SDL_ttf.h>
+#include <iostream>
+using namespace std;
 
 
 
@@ -65,6 +67,18 @@ void Button::onAddToView(View* v)
 
 void Button::onMouseHover()
 {
+		/*cout << this->color.getR() << endl;
+		cout << this->color.getG() << endl;
+		cout << this->color.getB() << endl;*/
+	
+	if(this->isMouseHovering())
+	{
+		this->setColor(80, 80, 80);
+		//this->setColor(0x00, 0x00, 0x00);
+	}
+	/*else {
+		this->setColor(this->color->getR(), 255, 255);
+	}*/
 	
 }
 
@@ -75,7 +89,7 @@ void Button::onMouseUnhover()
 
 void Button::onMouseClick()
 {
-	this->setColor(220, 220, 220);
+	//this->setColor(220, 220, 220);
 
 	if (this->onClickCallback)
 		this->onClickCallback();

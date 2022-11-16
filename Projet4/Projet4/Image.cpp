@@ -39,6 +39,7 @@ void Image::onAddToView(View* v)
 	SDL_FreeSurface(logoSurface);
 }
 
+
 void Image::onMouseClick()
 {
 	if (this->onClickCallback)

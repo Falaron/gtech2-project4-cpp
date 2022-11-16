@@ -83,9 +83,9 @@ void View::handleEvent( const SDL_Event& e )
 
 Widget* View::getHoveredWidget() const
 {
-	for (Widget* w : widgets) {
-		if (w->isMouseHovering()) {
-			return w;
+	for (auto i = widgets.rbegin(); i < widgets.rend(); ++i) {
+		if ((*i)->isMouseHovering()) {
+			return *i;
 		}
 	}
 	return 0;
@@ -93,15 +93,15 @@ Widget* View::getHoveredWidget() const
 
 void View::getMousePos(int* x, int* y) const
 {
-	int ww, wh;
-	SDL_GetWindowSize(window, &ww, &wh);
+	/*int ww, wh;
+	SDL_GetWindowSize(window, &ww, &wh);*/
 
 	SDL_GetMouseState(x, y);
-	*x *= 480;
+	/**x *= 480;
 	*y *= 900;
 
 	*x /= ww;
-	*y /= wh;
+	*y /= wh;*/
 }
 
 int View::getWidth() const

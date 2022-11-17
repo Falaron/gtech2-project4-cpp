@@ -45,10 +45,6 @@ int main(int argc, char* argv[])
     List list;
 
     Window* main_window = new Window("Baby", 360, 611);
-    /*SDL_SetRenderDrawColor(main_window->GetRenderer(), 49, 49, 49, SDL_ALPHA_OPAQUE);*/
-    /*main_window->ClearRenderer(main_window->GetRenderer()); */
-    /*SDL_RenderPresent(renderer);*/
-
 
     //init main view
     viewMain = new View(main_window->GetSDLWindow(), main_window->GetRenderer());

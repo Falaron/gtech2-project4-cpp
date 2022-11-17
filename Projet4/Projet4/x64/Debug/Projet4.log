@@ -1,1 +1,34 @@
-﻿  Projet4.vcxproj -> C:\Users\Orrigine\source\repos\gtech2-project4-cpp\Projet4\x64\Debug\Projet4.exe
+﻿  main.cpp
+C:\Users\Orrigine\source\repos\gtech2-project4-cpp\Projet4\Projet4\View.hpp(11,24): warning C4091: 'typedef ' : ignoré à gauche de 'SDL_Event' quand aucune variable n'est déclarée
+C:\Users\Orrigine\source\repos\gtech2-project4-cpp\Projet4\Projet4\Widget.hpp(9,24): warning C4091: 'typedef ' : ignoré à gauche de 'SDL_Event' quand aucune variable n'est déclarée
+  MainPage.cpp
+C:\Users\Orrigine\source\repos\gtech2-project4-cpp\Projet4\Projet4\View.hpp(11,24): warning C4091: 'typedef ' : ignoré à gauche de 'SDL_Event' quand aucune variable n'est déclarée
+C:\Users\Orrigine\source\repos\gtech2-project4-cpp\Projet4\Projet4\Widget.hpp(9,24): warning C4091: 'typedef ' : ignoré à gauche de 'SDL_Event' quand aucune variable n'est déclarée
+C:\Users\Orrigine\source\repos\gtech2-project4-cpp\Projet4\Projet4\window.hpp(6,1): error C2011: 'Window' : redéfinition du type 'class'
+C:\Users\Orrigine\source\repos\gtech2-project4-cpp\Projet4\Projet4\window.hpp(5): message : voir la déclaration de 'Window'
+C:\Users\Orrigine\source\repos\gtech2-project4-cpp\Projet4\Projet4\MainPage.cpp(8,1): error C2084: la fonction 'void MainPage::goToFeed(void)' a déjà un corps
+C:\Users\Orrigine\source\repos\gtech2-project4-cpp\Projet4\Projet4\MainPage.hpp(25): message : voir la définition précédente de 'goToFeed'
+C:\Users\Orrigine\source\repos\gtech2-project4-cpp\Projet4\Projet4\MainPage.cpp(13,1): error C2084: la fonction 'void MainPage::goToSettings(void)' a déjà un corps
+C:\Users\Orrigine\source\repos\gtech2-project4-cpp\Projet4\Projet4\MainPage.hpp(30): message : voir la définition précédente de 'goToSettings'
+C:\Users\Orrigine\source\repos\gtech2-project4-cpp\Projet4\Projet4\MainPage.cpp(18,1): error C2084: la fonction 'void MainPage::goToRegurgited(void)' a déjà un corps
+C:\Users\Orrigine\source\repos\gtech2-project4-cpp\Projet4\Projet4\MainPage.hpp(35): message : voir la définition précédente de 'goToRegurgited'
+C:\Users\Orrigine\source\repos\gtech2-project4-cpp\Projet4\Projet4\MainPage.cpp(23,1): error C2084: la fonction 'void MainPage::goToShop(void)' a déjà un corps
+C:\Users\Orrigine\source\repos\gtech2-project4-cpp\Projet4\Projet4\MainPage.hpp(40): message : voir la définition précédente de 'goToShop'
+C:\Users\Orrigine\source\repos\gtech2-project4-cpp\Projet4\Projet4\MainPage.cpp(28,1): error C2084: la fonction 'void MainPage::goToMain(void)' a déjà un corps
+C:\Users\Orrigine\source\repos\gtech2-project4-cpp\Projet4\Projet4\MainPage.hpp(45): message : voir la définition précédente de 'goToMain'
+C:\Users\Orrigine\source\repos\gtech2-project4-cpp\Projet4\Projet4\MainPage.cpp(42,1): error C2512: 'View' : aucun constructeur par défaut approprié disponible
+C:\Users\Orrigine\source\repos\gtech2-project4-cpp\Projet4\Projet4\MainPage.hpp(16,7): message : voir la déclaration de 'View'
+C:\Users\Orrigine\source\repos\gtech2-project4-cpp\Projet4\Projet4\MainPage.cpp(46,38): error C2027: utilisation du type non défini 'SDL_Window'
+C:\Users\Orrigine\source\repos\gtech2-project4-cpp\Projet4\Projet4\View.hpp(9): message : voir la déclaration de 'SDL_Window'
+C:\Users\Orrigine\source\repos\gtech2-project4-cpp\Projet4\Projet4\MainPage.cpp(52,36): error C2027: utilisation du type non défini 'SDL_Window'
+C:\Users\Orrigine\source\repos\gtech2-project4-cpp\Projet4\Projet4\View.hpp(9): message : voir la déclaration de 'SDL_Window'
+C:\Users\Orrigine\source\repos\gtech2-project4-cpp\Projet4\Projet4\MainPage.cpp(56,32): error C2660: 'Image::setOnClickCallback' : la fonction ne prend pas 0 arguments
+C:\Users\Orrigine\source\repos\gtech2-project4-cpp\Projet4\Projet4\Image.hpp(30,7): message : voir la déclaration de 'Image::setOnClickCallback'
+C:\Users\Orrigine\source\repos\gtech2-project4-cpp\Projet4\Projet4\MainPage.cpp(69,29): error C2027: utilisation du type non défini 'SDL_Window'
+C:\Users\Orrigine\source\repos\gtech2-project4-cpp\Projet4\Projet4\View.hpp(9): message : voir la déclaration de 'SDL_Window'
+C:\Users\Orrigine\source\repos\gtech2-project4-cpp\Projet4\Projet4\MainPage.cpp(115,23): error C2065: 'bottle' : identificateur non déclaré
+C:\Users\Orrigine\source\repos\gtech2-project4-cpp\Projet4\Projet4\MainPage.cpp(123,32): error C2065: 'bottle' : identificateur non déclaré
+C:\Users\Orrigine\source\repos\gtech2-project4-cpp\Projet4\Projet4\MainPage.cpp(142,34): error C2065: 'bottle' : identificateur non déclaré
+C:\Users\Orrigine\source\repos\gtech2-project4-cpp\Projet4\Projet4\MainPage.cpp(161,35): error C2065: 'bottle' : identificateur non déclaré
+C:\Users\Orrigine\source\repos\gtech2-project4-cpp\Projet4\Projet4\MainPage.cpp(243,35): error C2065: 'bottle' : identificateur non déclaré
+  Génération de code en cours...

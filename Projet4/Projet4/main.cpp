@@ -58,13 +58,98 @@ int main(int argc, char* argv[])
 
 
     Box* header = new Box();
-	header->setColor(80, 80, 80);   
+	header->setColor(80, 80, 80);  
     header->setSize(main_window->winWidth, 45);
     viewMain->addWidget(header);
+
+    Button* Logo = new Button("Logo");
+    Logo->setOnClickCallback(goToMain);
+    Logo->setSize(75, 35);
+    Logo->setPosition(145, 5);
+    viewMain->addWidget(Logo);
+
+    Button* buttonShop = new Button("L");
+    buttonShop->setOnClickCallback(goToShop);
+    buttonShop->setSize(30, 30);
+    buttonShop->setPosition(290, 7);
+    viewMain->addWidget(buttonShop);
 	
-    Button* button1 = new Button("PageMain");
-    button1->setOnClickCallback(goToFeed);
-    viewMain->addWidget(button1);
+    Button* buttonSettings = new Button("O");
+    buttonSettings->setOnClickCallback(goToSettings);
+    buttonSettings->setSize(30, 30);
+    buttonSettings->setPosition(325, 7);
+    viewMain->addWidget(buttonSettings);
+
+    Box* footer = new Box();
+    footer->setColor(80, 80, 80);
+    footer->setSize(main_window->winWidth, 45);
+    footer->setPosition(0, 566);
+    viewMain->addWidget(footer);
+
+    Button* BabyNCo = new Button("Baby+");
+    BabyNCo->setSize(75, 35);
+    BabyNCo->setPosition(5, 571);
+    viewMain->addWidget(BabyNCo);
+
+    Button* GreyBird = new Button("GreyBird");
+    GreyBird->setSize(75, 35);
+    GreyBird->setPosition(280, 571);
+    viewMain->addWidget(GreyBird);
+
+
+
+    Box* infoPanelBig = new Box();
+    infoPanelBig->setSize(340, 180);
+    infoPanelBig->setPosition(10, 65);
+    infoPanelBig->setColor(49, 49, 49);
+    viewMain->addWidget(infoPanelBig);
+
+    Box* infoPanelMid = new Box();
+    infoPanelMid->setSize(340, 140);
+    infoPanelMid->setPosition(10, 85);
+    viewMain->addWidget(infoPanelMid);
+
+
+
+    Box* panelBigRefill = new Box();
+    panelBigRefill->setSize(340, 140);
+    panelBigRefill->setPosition(10, 260);
+    panelBigRefill->setColor(49, 49, 49);
+    viewMain->addWidget(panelBigRefill);
+
+    Box* panelMidRefill = new Box();
+    panelMidRefill->setSize(340, 100);
+    panelMidRefill->setPosition(10, 280);
+    viewMain->addWidget(panelMidRefill);
+
+    Button* buttonRefill = new Button("refill");
+    buttonRefill->setSize(130, 20);
+    buttonRefill->setPosition(200, 335);
+    buttonRefill->setColor(220, 20, 60);
+    //button1->setOnClickCallback();  --> refill bottle
+    viewMain->addWidget(buttonRefill);
+
+
+
+    Box* panelBigFeed = new Box();
+    panelBigFeed->setSize(340, 140);
+    panelBigFeed->setPosition(10, 410);
+    panelBigFeed->setColor(49, 49, 49);
+    viewMain->addWidget(panelBigFeed);
+
+    Box* panelMidFeed = new Box();
+    panelMidFeed->setSize(340, 100);
+    panelMidFeed->setPosition(10, 430);
+    viewMain->addWidget(panelMidFeed);
+
+    Button* buttonFeed = new Button("Feed Arthur");
+    buttonFeed->setSize(130, 20);
+    buttonFeed->setPosition(200, 485);
+    buttonFeed->setColor(220, 20, 60);
+    buttonFeed->setOnClickCallback(goToFeed);
+    viewMain->addWidget(buttonFeed);
+
+
 
     //init view Feed
     View *viewFeed = new View(main_window->GetSDLWindow(), main_window->GetRenderer());

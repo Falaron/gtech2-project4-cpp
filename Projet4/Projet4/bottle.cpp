@@ -68,3 +68,8 @@ int Bottle::GetFeedIntervalM() {
 int Bottle::GetFeedTimeLeftH() {
 	return feedTimeLeftH;
 }
+
+int Bottle::SetBottleVolume(int value) {
+	bottleVolume = value;
+	return bottleVolume;
+}

@@ -22,6 +22,8 @@ public:
 	int GetFeedIntervalM();
 	int GetFeedTimeLeftH();
 
+	int SetBottleVolume(int);
+
 private:
 	int bottleVolume = 250;
 	int bottleQuantity = bottleVolume;

@@ -229,7 +229,7 @@ int main(int argc, char* argv[])
         Button* buttonRefill = new Button("refill");
         buttonRefill->setSize(130, 20);
         buttonRefill->setPosition(200, 335);
-        buttonRefill->setColor(220, 20, 60);
+        buttonRefill->setColor(220, 220, 220);
         //button1->setOnClickCallback();  --> refill bottle
         viewMain->addWidget(buttonRefill);
 
@@ -275,7 +275,7 @@ int main(int argc, char* argv[])
         Button* buttonFeed = new Button("Feed Arthur");
         buttonFeed->setSize(130, 20);
         buttonFeed->setPosition(200, 485);
-        buttonFeed->setColor(220, 20, 60);
+        buttonFeed->setColor(220, 220, 220);
         buttonFeed->setOnClickCallback(goToFeed);
         viewMain->addWidget(buttonFeed);
     }
@@ -370,7 +370,7 @@ int main(int argc, char* argv[])
         Button* buttonRegurgited = new Button("Baby regurgited his milk");
         buttonRegurgited->setSize(200, 20);
         buttonRegurgited->setPosition(80, 280);
-        buttonRegurgited->setColor(220, 20, 60);
+        buttonRegurgited->setColor(220, 220, 220);
         buttonRegurgited->setOnClickCallback(goToFeed);
         viewFeed->addWidget(buttonRegurgited);
     }
@@ -465,7 +465,7 @@ int main(int argc, char* argv[])
     //    Button* buttonRegurgited = new Button("Baby regurgited his milk");
     //    buttonRegurgited->setSize(200, 20);
     //    buttonRegurgited->setPosition(80, 280);
-    //    buttonRegurgited->setColor(220, 20, 60);
+    //    buttonRegurgited->setColor(220, 220, 220);
     //    buttonRegurgited->setOnClickCallback(goToFeed);
     //    viewRegurgited->addWidget(buttonRegurgited);
     //}

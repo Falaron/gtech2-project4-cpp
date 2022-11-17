@@ -84,7 +84,7 @@ void Button::onMouseHover()
 
 void Button::onMouseUnhover()
 {
-	this->setColor(255, 255, 255);
+	this->setColor(220, 220, 220);
 }
 
 void Button::onMouseClick()

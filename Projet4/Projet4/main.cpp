@@ -48,7 +48,6 @@ void goToMain()
     currentView = viewMain;
 }
 
-
 void GetInput1() {
     bottle.SetBottleVolume(stoi(main_window->Input()));
     currentView = viewMain;
@@ -58,25 +57,24 @@ int main(int argc, char* argv[])
 {
 
     Window* main_window = new Window("Baby", 360, 611);
-    /*SDL_SetRenderDrawColor(main_window->GetRenderer(), 49, 49, 49, SDL_ALPHA_OPAQUE);*/
-    /*main_window->ClearRenderer(main_window->GetRenderer()); */
-    /*SDL_RenderPresent(renderer);*/
-
 
     //init main view
-    viewMain = new View(main_window->GetSDLWindow(), main_window->GetRenderer());
-    viewFeed = new View(main_window->GetSDLWindow(), main_window->GetRenderer());
-    viewSettings = new View(main_window->GetSDLWindow(), main_window->GetRenderer());
-    viewShop = new View(main_window->GetSDLWindow(), main_window->GetRenderer());
-    viewRegurgited = new View(main_window->GetSDLWindow(), main_window->GetRenderer());
-    viewMain->setFont(main_window->font);
+    {
+        viewMain = new View(main_window->GetSDLWindow(), main_window->GetRenderer());
+        viewFeed = new View(main_window->GetSDLWindow(), main_window->GetRenderer());
+        viewSettings = new View(main_window->GetSDLWindow(), main_window->GetRenderer());
+        viewShop = new View(main_window->GetSDLWindow(), main_window->GetRenderer());
+        viewRegurgited = new View(main_window->GetSDLWindow(), main_window->GetRenderer());
+        viewMain->setFont(main_window->font);
 
-    Box* GLOBALE = new Box();
+        Box* GLOBALE = new Box();
 
-    GLOBALE->setColor(49, 49, 49);
-    GLOBALE->setPosition(0, 0);
-    GLOBALE->setSize(main_window->winWidth, main_window->winHeight);
-    viewMain->addWidget(GLOBALE);
+        GLOBALE->setColor(49, 49, 49);
+        GLOBALE->setPosition(0, 0);
+        GLOBALE->setSize(main_window->winWidth, main_window->winHeight);
+        viewMain->addWidget(GLOBALE);
+    }
+    
 
 
     //View HomePage
@@ -196,110 +194,110 @@ int main(int argc, char* argv[])
         quantityBaby->setColor(255, 255, 255);
         quantityBaby->setPosition(270, 170);
         viewMain->addWidget(quantityBaby);
-        //Adding text content variable
-        Text* babyQuantity = new Text();
-        string sbabyQuantity = to_string(bottle.GetBabyQuantity()) + " ml";
-        char const* pbabyQuantity = sbabyQuantity.c_str();
-        babyQuantity->setText(pbabyQuantity);
-        babyQuantity->setColor(255, 255, 255);
-        babyQuantity->setPosition(280, 185);
-        viewMain->addWidget(babyQuantity);
+//Adding text content variable
+Text* babyQuantity = new Text();
+string sbabyQuantity = to_string(bottle.GetBabyQuantity()) + " ml";
+char const* pbabyQuantity = sbabyQuantity.c_str();
+babyQuantity->setText(pbabyQuantity);
+babyQuantity->setColor(255, 255, 255);
+babyQuantity->setPosition(280, 185);
+viewMain->addWidget(babyQuantity);
 
 
-        //Center
-        Box* panelBigRefill = new Box();
-        panelBigRefill->setSize(340, 140);
-        panelBigRefill->setPosition(10, 260);
-        panelBigRefill->setColor(15, 15, 15);
-        viewMain->addWidget(panelBigRefill);
-        //Border
-        Box* panelMidRefill = new Box();
-        panelMidRefill->setSize(340, 100);
-        panelMidRefill->setPosition(10, 280);
-        panelMidRefill->setColor(21, 21, 21);
-        viewMain->addWidget(panelMidRefill);
-        //Adding text refill the bottle
-        Text* Title2 = new Text();
-        Title2->setText("Refill the bottle");
-        Title2->setColor(255, 255, 255);
-        Title2->setPosition(15, 260);
-        viewMain->addWidget(Title2);
-        //Content
-        Image* imageBottle2 = new Image("img/bottle.png");
-        imageBottle2->setSize(49, 49);
-        imageBottle2->setPosition(45, 290);
-        viewMain->addWidget(imageBottle2);
-        //Adding text bottle content
-        Text* bottleRefill = new Text();
-        bottleRefill->setText("You must refill");
-        bottleRefill->setColor(255, 255, 255);
-        bottleRefill->setPosition(20, 340);
-        viewMain->addWidget(bottleRefill);
-        Text* bottleRefill2 = new Text();
-        bottleRefill2->setText("the bottle");
-        bottleRefill2->setColor(255, 255, 255);
-        bottleRefill2->setPosition(35, 355);
-        viewMain->addWidget(bottleRefill2);
-        //Refill button
-        Button* buttonRefill = new Button("refill");
-        buttonRefill->setSize(130, 20);
-        buttonRefill->setPosition(200, 335);
-        buttonRefill->setColor(220, 20, 60);
-        buttonRefill->setOnClickCallback(GetBottleFill);
-        viewMain->addWidget(buttonRefill);
+//Center
+Box* panelBigRefill = new Box();
+panelBigRefill->setSize(340, 140);
+panelBigRefill->setPosition(10, 260);
+panelBigRefill->setColor(15, 15, 15);
+viewMain->addWidget(panelBigRefill);
+//Border
+Box* panelMidRefill = new Box();
+panelMidRefill->setSize(340, 100);
+panelMidRefill->setPosition(10, 280);
+panelMidRefill->setColor(21, 21, 21);
+viewMain->addWidget(panelMidRefill);
+//Adding text refill the bottle
+Text* Title2 = new Text();
+Title2->setText("Refill the bottle");
+Title2->setColor(255, 255, 255);
+Title2->setPosition(15, 260);
+viewMain->addWidget(Title2);
+//Content
+Image* imageBottle2 = new Image("img/bottle.png");
+imageBottle2->setSize(49, 49);
+imageBottle2->setPosition(45, 290);
+viewMain->addWidget(imageBottle2);
+//Adding text bottle content
+Text* bottleRefill = new Text();
+bottleRefill->setText("You must refill");
+bottleRefill->setColor(255, 255, 255);
+bottleRefill->setPosition(20, 340);
+viewMain->addWidget(bottleRefill);
+Text* bottleRefill2 = new Text();
+bottleRefill2->setText("the bottle");
+bottleRefill2->setColor(255, 255, 255);
+bottleRefill2->setPosition(35, 355);
+viewMain->addWidget(bottleRefill2);
+//Refill button
+Button* buttonRefill = new Button("refill");
+buttonRefill->setSize(130, 20);
+buttonRefill->setPosition(200, 335);
+buttonRefill->setColor(220, 20, 60);
+buttonRefill->setOnClickCallback(GetBottleFill);
+viewMain->addWidget(buttonRefill);
 
 
-        //Center
-        Box* panelBigFeed = new Box();
-        panelBigFeed->setSize(340, 140);
-        panelBigFeed->setPosition(10, 410);
-        panelBigFeed->setColor(15, 15, 15);
-        viewMain->addWidget(panelBigFeed);
-        //Border
-        Box* panelMidFeed = new Box();
-        panelMidFeed->setSize(340, 100);
-        panelMidFeed->setPosition(10, 430);
-        panelMidFeed->setColor(21, 21, 21);
-        viewMain->addWidget(panelMidFeed);
-        //Adding text feed my baby
-        Text* Title3 = new Text();
-        Title3->setText("Feed my baby");
-        Title3->setColor(255, 255, 255);
-        Title3->setPosition(15, 410);
-        viewMain->addWidget(Title3);
+//Center
+Box* panelBigFeed = new Box();
+panelBigFeed->setSize(340, 140);
+panelBigFeed->setPosition(10, 410);
+panelBigFeed->setColor(15, 15, 15);
+viewMain->addWidget(panelBigFeed);
+//Border
+Box* panelMidFeed = new Box();
+panelMidFeed->setSize(340, 100);
+panelMidFeed->setPosition(10, 430);
+panelMidFeed->setColor(21, 21, 21);
+viewMain->addWidget(panelMidFeed);
+//Adding text feed my baby
+Text* Title3 = new Text();
+Title3->setText("Feed my baby");
+Title3->setColor(255, 255, 255);
+Title3->setPosition(15, 410);
+viewMain->addWidget(Title3);
 
-        Image* imageTimer2 = new Image("img/time.png");
-        imageTimer2->setSize(49, 49);
-        imageTimer2->setPosition(45, 440);
-        viewMain->addWidget(imageTimer2);
-        //Adding text Feed Time
-        Text* feedTimeLeft = new Text();
-        feedTimeLeft->setText("Feed Time Left");
-        feedTimeLeft->setColor(255, 255, 255);
-        feedTimeLeft->setPosition(15, 490);
-        viewMain->addWidget(feedTimeLeft);
-        //Adding text content variable
-        Text* currentTime2 = new Text();
-        string sCurrentTime2 = to_string(bottle.GetFeedTimeLeftH()) + " h";
-        char const* pCurrentTime2 = sCurrentTime2.c_str();
-        currentTime2->setText(pCurrentTime2);
-        currentTime2->setColor(255, 255, 255);
-        currentTime2->setPosition(60, 505);
-        viewMain->addWidget(currentTime2);
-        //button feed
-        Button* buttonFeed = new Button("Feed Arthur");
-        buttonFeed->setSize(130, 20);
-        buttonFeed->setPosition(200, 485);
-        buttonFeed->setColor(220, 20, 60);
-        buttonFeed->setOnClickCallback(goToFeed);
-        viewMain->addWidget(buttonFeed);
+Image* imageTimer2 = new Image("img/time.png");
+imageTimer2->setSize(49, 49);
+imageTimer2->setPosition(45, 440);
+viewMain->addWidget(imageTimer2);
+//Adding text Feed Time
+Text* feedTimeLeft = new Text();
+feedTimeLeft->setText("Feed Time Left");
+feedTimeLeft->setColor(255, 255, 255);
+feedTimeLeft->setPosition(15, 490);
+viewMain->addWidget(feedTimeLeft);
+//Adding text content variable
+Text* currentTime2 = new Text();
+string sCurrentTime2 = to_string(bottle.GetFeedTimeLeftH()) + " h";
+char const* pCurrentTime2 = sCurrentTime2.c_str();
+currentTime2->setText(pCurrentTime2);
+currentTime2->setColor(255, 255, 255);
+currentTime2->setPosition(60, 505);
+viewMain->addWidget(currentTime2);
+//button feed
+Button* buttonFeed = new Button("Feed Arthur");
+buttonFeed->setSize(130, 20);
+buttonFeed->setPosition(200, 485);
+buttonFeed->setColor(220, 20, 60);
+buttonFeed->setOnClickCallback(goToFeed);
+viewMain->addWidget(buttonFeed);
     }
 
     //View Feed
     {
         viewFeed->setFont(main_window->font);
         //viewFeed->addWidget(GLOBALE);
-        
+
 
         Box* header = new Box();
         header->setColor(15, 15, 15);
@@ -399,7 +397,8 @@ int main(int argc, char* argv[])
         viewFeed->addWidget(buttonRegurgited);
     }
 
-    ////View Settings
+
+    //View Settings
     {
         viewSettings->setFont(main_window->font);
 
@@ -525,11 +524,7 @@ int main(int argc, char* argv[])
         InputInterval3->setSize(130, 20);
         InputInterval3->setPosition(50, 480);
         /*InputInterval2->setOnClickCallback(GetInput);*/
-        viewSettings->addWidget(InputInterval3);
-
-
-
-        
+        viewSettings->addWidget(InputInterval3); 
     }
 
 	

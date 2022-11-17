@@ -1,6 +1,4 @@
-﻿  bottle.cpp
-  main.cpp
+﻿  main.cpp
 C:\Users\rmateescu\source\repos\gtech2-project4-cpp\Projet4\Projet4\View.hpp(11,24): warning C4091: 'typedef ': ignored on left of 'SDL_Event' when no variable is declared
 C:\Users\rmateescu\source\repos\gtech2-project4-cpp\Projet4\Projet4\Widget.hpp(9,24): warning C4091: 'typedef ': ignored on left of 'SDL_Event' when no variable is declared
-  Generating Code...
   Projet4.vcxproj -> C:\Users\rmateescu\source\repos\gtech2-project4-cpp\Projet4\x64\Debug\Projet4.exe

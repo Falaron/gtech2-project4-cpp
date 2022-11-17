@@ -9,6 +9,7 @@
 #include "Box.h"
 #include "bottle.hpp"
 #include "string"
+#include "List.h"
 using namespace std;
 
 
@@ -41,6 +42,7 @@ int main(int argc, char* argv[])
 {
     //Init Window
     Bottle bottle;
+    List list;
 
     Window* main_window = new Window("Baby", 360, 611);
     /*SDL_SetRenderDrawColor(main_window->GetRenderer(), 49, 49, 49, SDL_ALPHA_OPAQUE);*/
@@ -164,7 +166,7 @@ int main(int argc, char* argv[])
         viewMain->addWidget(feedTimeText);
         //Adding text content variable
         Text* currentTime = new Text();
-        string sCurrentTime = to_string(bottle.GetFeedInterval()) + " h";
+        string sCurrentTime = to_string(bottle.GetFeedIntervalH()) + " h";
         char const* pCurrentTime = sCurrentTime.c_str();
         currentTime->setText(pCurrentTime);
         currentTime->setColor(255, 255, 255);
@@ -265,7 +267,7 @@ int main(int argc, char* argv[])
         viewMain->addWidget(feedTimeLeft);
         //Adding text content variable
         Text* currentTime2 = new Text();
-        string sCurrentTime2 = to_string(bottle.GetCurrentTime()) + " h";
+        string sCurrentTime2 = to_string(bottle.GetFeedTimeLeftH()) + " h";
         char const* pCurrentTime2 = sCurrentTime2.c_str();
         currentTime2->setText(pCurrentTime2);
         currentTime2->setColor(255, 255, 255);

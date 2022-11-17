@@ -1,5 +1,6 @@
 #include "List.h"
 #include <iostream>
+#include <string>
 using namespace std;
 
 void List::CreateProduct() {
@@ -14,13 +15,13 @@ void List::CreateProduct() {
 
 int List::getEmptyListPosition() {
 	for (int i = 0; i < 10; i++) {
-		if (productList[i] == 0) {
+		if (productList[i] == "") {
 			return i;
 		}
 	}
 }
 
-void List::AddProductToList(int listNumber, char productName, int productQuantity) {
+void List::AddProductToList(int listNumber, std::string productName, int productQuantity) {
 	productList[listNumber] = productName;
 	productMaxQuantity[listNumber] = productQuantity;
 	quantityRemaining[listNumber] = productQuantity;
@@ -43,7 +44,7 @@ void List::ShowList() {
 
 void List::ResetList() {
 	for (int i = 0; i < 10; i++) {
-		productList[i] = 0;
+		productList[i] = "";
 		quantityRemaining[i] = 0;
 		productMaxQuantity[i] = 0;
 	}
@@ -55,10 +56,6 @@ void List::ReduceMilkQuantity(int qty) {
 
 List::List() {
 	ResetList();
-	for (int i = 0; i < 10; i++) {
-		CreateProduct();
-		ShowList();
-	}
 }
 
 List::~List() {

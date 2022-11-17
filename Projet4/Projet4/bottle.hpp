@@ -1,26 +1,47 @@
 #pragma once
+#define _CRT_SECURE_NO_WARNINGS
+#include <ctime>
 
 class Bottle {
 public:
 	Bottle();
 	void IsFeedingTime();
 	void Feed();
-	void Refill(int bottleQuantity);
+	void Refill();
 	void ChangeVolume();
 	void Regurgited();
 
 	void Print(); //print informations
 	//void Input(/* element by element */);
 
+	int GetBottleQuantity();
+	int GetBottleVolume();
+	int GetCurrentTime();
+	int GetBabyQuantity();
+	int GetFeedIntervalH();
+	int GetFeedIntervalM();
+	int GetFeedTimeLeftH();
+
+	int SetBottleVolume(int);
+
 private:
-	int bottleVolume = 100;
+	int bottleVolume = 250;
 	int bottleQuantity = bottleVolume;
-	int max_quantity = 15;
-	int min_quantity = 10;
+	int quantityToGive = 135;
 	int quantityFed = 0;
 
-	int improvisedFeed = 0;
-	int timeInterval = 3; //hours
-	int lastFeedingTime = 7;
-	int currentTime = 8;
+	time_t now = time(0);
+	tm* ltm = localtime(&now);
+
+
+	int improvisedFeedH = 0; //improvised consumable time interval in hours
+	int improvisedFeedM = 0; //improvised consumable time interval in minutes
+	int timeIntervalH = 3; //must feed every interval time in hours
+	int timeIntervalM = 0; //must feed every interval time in minutes
+	int lastFeedingTimeH = 9; //time when last fed in hours
+	int lastFeedingTimeM = 30;//time when last fed in minutes 
+	int currentTimeH = ltm->tm_hour; //computer's hours
+	int currentTimeM = ltm->tm_min;  //computer's minutes
+	int feedTimeLeftH = - currentTimeH + lastFeedingTimeH + timeIntervalH;
+	int feedTimeLeftM = - currentTimeM + lastFeedingTimeM + timeIntervalM;
 };

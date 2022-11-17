@@ -12,11 +12,6 @@ void Bottle::Print() {
     
 }
 
-void Bottle::ChangeVolume() {
-	cout << "type the new volume of your bottle" << endl;
-	cin >> bottleVolume;
-}
-
 void Bottle::Refill() {
 	bottleQuantity = bottleVolume;
 }

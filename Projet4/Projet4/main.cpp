@@ -499,6 +499,30 @@ int main(int argc, char* argv[])
         /*InputInterval2->setOnClickCallback(GetInput);*/
         viewSettings->addWidget(InputInterval2);
 
+        //Center
+        Box* panelBigRefill3 = new Box();
+        panelBigRefill3->setSize(340, 140);
+        panelBigRefill3->setPosition(10, 420);
+        panelBigRefill3->setColor(15, 15, 15);
+        viewSettings->addWidget(panelBigRefill3);
+        //Border
+        Box* panelMidRefill3 = new Box();
+        panelMidRefill3->setSize(340, 100);
+        panelMidRefill3->setPosition(10, 440);
+        panelMidRefill3->setColor(21, 21, 21);
+        viewSettings->addWidget(panelMidRefill3);
+        //Adding text refill the bottle
+        Text* Title3 = new Text();
+        Title3->setText("Quantity to give");
+        Title3->setColor(255, 255, 255);
+        Title3->setPosition(15, 420);
+        viewSettings->addWidget(Title3);
+        Button* InputInterval3 = new Button("Set value");
+        InputInterval3->setSize(130, 20);
+        InputInterval3->setPosition(50, 480);
+        /*InputInterval2->setOnClickCallback(GetInput);*/
+        viewSettings->addWidget(InputInterval3);
+
 
 
         

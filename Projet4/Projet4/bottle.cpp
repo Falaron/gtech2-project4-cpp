@@ -17,10 +17,8 @@ void Bottle::ChangeVolume() {
 	cin >> bottleVolume;
 }
 
-void Bottle::Refill(int bottleQuantity) {
-	if (bottleQuantity <= bottleVolume / 10) {
-		cout << "milk quantity low " << endl << "please refill the bottle" << endl;
-	}
+void Bottle::Refill() {
+	bottleQuantity = bottleVolume;
 }
 
 void Bottle::Feed() {
@@ -69,4 +67,9 @@ int Bottle::GetFeedIntervalM() {
 
 int Bottle::GetFeedTimeLeftH() {
 	return feedTimeLeftH;
+}
+
+int Bottle::SetBottleVolume(int value) {
+	bottleVolume = value;
+	return bottleVolume;
 }

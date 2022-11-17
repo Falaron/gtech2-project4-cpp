@@ -73,7 +73,7 @@ void Button::onMouseHover()
 	
 	if(this->isMouseHovering())
 	{
-		this->setColor(180, 180, 180);
+		this->setColor(80, 80, 80);
 		//this->setColor(0x00, 0x00, 0x00);
 	}
 	/*else {
@@ -84,7 +84,7 @@ void Button::onMouseHover()
 
 void Button::onMouseUnhover()
 {
-	this->setColor(220, 220, 220);
+	this->setColor(255, 255, 255);
 }
 
 void Button::onMouseClick()

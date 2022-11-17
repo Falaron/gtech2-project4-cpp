@@ -17,6 +17,15 @@ Bottle bottle;
 
 
 
+Bottle bottle;
+List list;
+
+
+void GetBottleFill()
+{
+    bottle.Refill();
+}
+
 void goToFeed()
 {
     currentView = viewFeed;
@@ -42,16 +51,17 @@ void goToMain()
     currentView = viewMain;
 }
 
+<<<<<<< HEAD
+
+=======
 void GetInput1() {
     bottle.SetBottleVolume(stoi(main_window->Input()));
     currentView = viewMain;
 }
+>>>>>>> 651dea665c7b152b5e5204735cbc26722a0171c4
 
 int main(int argc, char* argv[])
 {
-    //Init Window
-    Bottle bottle;
-    List list;
 
     Window* main_window = new Window("Baby", 360, 611);
     /*SDL_SetRenderDrawColor(main_window->GetRenderer(), 49, 49, 49, SDL_ALPHA_OPAQUE);*/
@@ -241,7 +251,7 @@ int main(int argc, char* argv[])
         buttonRefill->setSize(130, 20);
         buttonRefill->setPosition(200, 335);
         buttonRefill->setColor(220, 20, 60);
-        //button1->setOnClickCallback();  --> refill bottle
+        buttonRefill->setOnClickCallback(GetBottleFill);
         viewMain->addWidget(buttonRefill);
 
 

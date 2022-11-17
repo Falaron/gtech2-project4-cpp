@@ -7,7 +7,7 @@ public:
 	Bottle();
 	void IsFeedingTime();
 	void Feed();
-	void Refill(int bottleQuantity);
+	void Refill();
 	void ChangeVolume();
 	void Regurgited();
 
@@ -38,9 +38,10 @@ private:
 	int improvisedFeedM = 0; //improvised consumable time interval in minutes
 	int timeIntervalH = 3; //must feed every interval time in hours
 	int timeIntervalM = 0; //must feed every interval time in minutes
-	int lastFeedingTimeH = 7; //time when last fed in hours
+	int lastFeedingTimeH = 9; //time when last fed in hours
 	int lastFeedingTimeM = 30;//time when last fed in minutes 
 	int currentTimeH = ltm->tm_hour; //computer's hours
 	int currentTimeM = ltm->tm_min;  //computer's minutes
-	int feedTimeLeftH = 3 ; //TODO
+	int feedTimeLeftH = - currentTimeH + lastFeedingTimeH + timeIntervalH;
+	int feedTimeLeftM = - currentTimeM + lastFeedingTimeM + timeIntervalM;
 };

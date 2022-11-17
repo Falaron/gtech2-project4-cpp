@@ -416,3 +416,7 @@ Projet4/Projet4/x64/Debug/Projet4.tlog/CL.command.1.tlog
 *.tlog
 *.tlog
 *.vcxproj
+*.pdb
+Projet4/Projet4/x64/Debug/vc143.pdb
+Projet4/Projet4/x64/Debug/vc143.idb
+*.pdb

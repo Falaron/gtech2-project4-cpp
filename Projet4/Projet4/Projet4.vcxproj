@@ -140,7 +140,6 @@
     <ClCompile Include="Image.cpp" />
     <ClCompile Include="List.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="MainPage.cpp" />
     <ClCompile Include="Text.cpp" />
     <ClCompile Include="View.cpp" />
     <ClCompile Include="Widget.cpp" />
@@ -154,7 +153,6 @@
     <ClInclude Include="Color.hpp" />
     <ClInclude Include="Image.hpp" />
     <ClInclude Include="List.h" />
-    <ClInclude Include="MainPage.hpp" />
     <ClInclude Include="Text.hpp" />
     <ClInclude Include="View.hpp" />
     <ClInclude Include="ViewManager.hpp" />

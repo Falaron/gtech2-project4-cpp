@@ -15,9 +15,6 @@ using namespace std;
 Window* main_window;
 Bottle bottle;
 
-
-
-Bottle bottle;
 List list;
 
 
@@ -51,14 +48,11 @@ void goToMain()
     currentView = viewMain;
 }
 
-<<<<<<< HEAD
 
-=======
 void GetInput1() {
     bottle.SetBottleVolume(stoi(main_window->Input()));
     currentView = viewMain;
 }
->>>>>>> 651dea665c7b152b5e5204735cbc26722a0171c4
 
 int main(int argc, char* argv[])
 {
@@ -539,7 +533,7 @@ int main(int argc, char* argv[])
     }
 
 	
-    currentView = viewSettings;
+    currentView = viewMain;
 
     while (main_window->closeRequest == 0) {
         main_window->frame_time_start = SDL_GetTicks();

@@ -1,4 +1,5 @@
 ﻿  main.cpp
 C:\Users\arthurjouve\Documents\GitHub\gtech2-project4-cpp\Projet4\Projet4\View.hpp(11,24): warning C4091: 'typedef ' : ignoré à gauche de 'SDL_Event' quand aucune variable n'est déclarée
 C:\Users\arthurjouve\Documents\GitHub\gtech2-project4-cpp\Projet4\Projet4\Widget.hpp(9,24): warning C4091: 'typedef ' : ignoré à gauche de 'SDL_Event' quand aucune variable n'est déclarée
+window.obj : warning LNK4099: PDB '' n'a pu être trouvé avec 'window.obj' ou sur '' ; l'objet sera lié sans informations de débogage
   Projet4.vcxproj -> C:\Users\arthurjouve\Documents\GitHub\gtech2-project4-cpp\Projet4\x64\Debug\Projet4.exe

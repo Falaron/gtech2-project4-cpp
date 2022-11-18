@@ -10,15 +10,15 @@
 
 Image::Image(const char* label)
 	: label(label), onClickCallback(0)
-	, labelTexture(0)
+	, imageTexture(0)
 {
 
 }
 
 Image::~Image()
 {
-	if (this->labelTexture) {
-		SDL_DestroyTexture(this->labelTexture);
+	if (this->imageTexture) {
+		SDL_DestroyTexture(this->imageTexture);
 	}
 }
 
@@ -28,18 +28,18 @@ void Image::render(SDL_Renderer* r)
 
 	// Draw a border.
 	SDL_Rect rect = { this->posX, this->posY, this->width, this->height };
-	SDL_RenderCopy(this->view->getSDLRenderer(), this->labelTexture, 0, &rect);
+	SDL_RenderCopy(this->view->getSDLRenderer(), this->imageTexture, 0, &rect);
 }
 
 void Image::onAddToView(View* v)
 {
-	// Generate label texture.
+	// Generate image texture.
 	SDL_Surface* logoSurface = IMG_Load(this->label.c_str());
-	this->labelTexture = SDL_CreateTextureFromSurface(this->view->getSDLRenderer(), logoSurface);
+	this->imageTexture = SDL_CreateTextureFromSurface(this->view->getSDLRenderer(), logoSurface);
 	SDL_FreeSurface(logoSurface);
 }
 
-
+// called when the mouse is clicking the button
 void Image::onMouseClick()
 {
 	if (this->onClickCallback)

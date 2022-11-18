@@ -102,17 +102,9 @@ SDL_Renderer* Window::GetRenderer() {
     return renderer;
 }
 
-//int Window::DrawText(const char* text, int positionX, int positionY) {
-//    surface = TTF_RenderText_Solid(font, text, color);
-//    texture = SDL_CreateTextureFromSurface(renderer, surface);
-//    SDL_Rect textRect = { positionX, positionY, surface->w, surface->h};
-//    SDL_RenderCopy(renderer, texture, NULL, &textRect);
-//    SDL_FreeSurface(surface);
-//    SDL_DestroyTexture(texture);
-//    return  1;
-//}
 
-std::string Window::Input() {
+
+string Window::Input() {
     string in;
     bool running = true;
 
@@ -134,15 +126,3 @@ std::string Window::Input() {
     return in;
 }
 
-//int Window::showImage(const char* img_name, int positionX, int positionY, int width, int height) {
-//    SDL_Surface* logoSurface = IMG_Load(img_name);
-//    SDL_Texture* logoTexture = SDL_CreateTextureFromSurface(renderer, logoSurface);
-//    SDL_FreeSurface(logoSurface);
-//
-//    SDL_RenderClear(renderer);
-//    SDL_Rect imgRect = { positionX, positionY, width, height };
-//    SDL_RenderCopy(renderer, logoTexture, NULL, &imgRect);
-//    SDL_RenderPresent(renderer);
-//
-//    return 1;
-//}

@@ -2,7 +2,15 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
+<<<<<<< HEAD
       <FullPath>C:\Users\Orrigine\source\repos\gtech2-project4-cpp\Projet4\x64\Debug\Projet4.exe</FullPath>
+=======
+<<<<<<< HEAD
+      <FullPath>C:\Users\matee\source\repos\gtech2-project4-cpp\Projet4\x64\Debug\Projet4.exe</FullPath>
+=======
+      <FullPath>C:\Users\arthurjouve\Documents\GitHub\gtech2-project4-cpp\Projet4\x64\Debug\Projet4.exe</FullPath>
+>>>>>>> 562e1281ecc8dc151027ee0e30f62e59571db08b
+>>>>>>> a933b02ae529d7c2448f32b55734b16f9d1bf937
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

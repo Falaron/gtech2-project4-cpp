@@ -6,13 +6,12 @@
 #include <SDL_ttf.h>
 
 
-
+// Declaration of the static member
 Box::Box()
 	: boxTexture(0)
 {
 
 }
-
  
 Box::~Box()
 {
@@ -28,26 +27,17 @@ void Box::render(SDL_Renderer* renderer)
 	// Draw a border.
 	SDL_Rect rect = { this->posX, this->posY, this->width, this->height };
 
-	
+	// Draw the inside of the button.
 	SDL_SetRenderDrawColor(renderer, color.getR(), color.getG(), color.getB(), 0xFF);
 	SDL_RenderFillRect(renderer, &rect);
 
-	// Draw the inside of the button.
 	rect.x += BORDER_SIZE;
 	rect.y += BORDER_SIZE;
 	rect.w -= BORDER_SIZE * 2;
 	rect.h -= BORDER_SIZE * 2;
 
-	/*SDL_SetRenderDrawColor(renderer, color.getR(), color.getG(), color.getB(), 0xFF);
-	SDL_RenderFillRect(renderer, &rect);*/
 
 
 }
 
-//void Box::onAddToView(View* v)
-//{
-//	// Generate label texture.
-//	/*SDL_Surface* temp = TTF_RenderText_Blended(this->view->getFont(), this->label.c_str(), { 0, 0, 0, 255 });*/
-//	this->boxTexture  = SDL_CreateTextureFromSurface(this->view->getSDLRenderer(), temp);
-//	SDL_FreeSurface(temp);
-//}
+

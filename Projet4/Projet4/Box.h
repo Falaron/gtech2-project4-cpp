@@ -18,9 +18,6 @@ public:
 	~Box();
 
 	virtual void render(SDL_Renderer* r) override;
-
-	/*virtual void onAddToView(View* v) override;*/
-
 	
 
 

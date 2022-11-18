@@ -10,9 +10,10 @@ public:
 	Color();
 
 	Color( unsigned char r, unsigned char g, unsigned char b );
-
+    // Getter 
 	unsigned int getRGBA() const { return rgba; }
 
+    // Getters
 	unsigned char getR() const { return r; }
 	unsigned char getG() const { return g; }
 	unsigned char getB() const { return b; }

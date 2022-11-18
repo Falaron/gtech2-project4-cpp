@@ -4,8 +4,7 @@
 
 #include <SDL.h>
 
-
-
+    // Constructor with forwareded parameters
 View::View(SDL_Window* window, SDL_Renderer* renderer)
 	: hoveredWidget( 0 ), font( 0 ), window(window), renderer(renderer)
 {
@@ -18,7 +17,7 @@ View::~View()
 		delete w;
 	}
 }
-
+// rendering the view
 void View::render()
 {
 	// Clear screen.
@@ -34,6 +33,7 @@ void View::render()
 	SDL_RenderPresent(renderer);
 }
 
+// Add a widget to the view
 void View::addWidget( Widget* w )
 {
 	widgets.push_back( w );
@@ -45,7 +45,7 @@ void View::setBackgroundColor(unsigned char r, unsigned char g, unsigned char b)
 {
 	backgroundColor = Color(r, g, b);
 }
-
+// Handle all type of events
 void View::handleEvent( const SDL_Event& e )
 {
 	switch (e.type) {
@@ -90,27 +90,22 @@ Widget* View::getHoveredWidget() const
 	}
 	return 0;
 }
-
+// Get the pos of mouse
 void View::getMousePos(int* x, int* y) const
 {
-	/*int ww, wh;
-	SDL_GetWindowSize(window, &ww, &wh);*/
+
 
 	SDL_GetMouseState(x, y);
-	/**x *= 480;
-	*y *= 900;
-
-	*x /= ww;
-	*y /= wh;*/
+	
 }
-
+// Get the width
 int View::getWidth() const
 {
 	int w;
 	SDL_GetWindowSize(window, &w, 0);
 	return w;
 }
-
+// Get the height
 int View::getHeight() const
 {
 	int h;

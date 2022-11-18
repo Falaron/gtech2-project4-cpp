@@ -8,7 +8,7 @@
 using namespace std;
 
 
-
+// Forwad declaration of the static member
 Button::Button(const char* label)
 	: label( label ), onClickCallback( 0 )
 	, labelTexture( 0 )
@@ -22,7 +22,7 @@ Button::~Button()
 		SDL_DestroyTexture(this->labelTexture);
 	}
 }
-
+// Rendering the button
 void Button::render( SDL_Renderer* r )
 {
 	const int BORDER_SIZE = 1;
@@ -42,6 +42,7 @@ void Button::render( SDL_Renderer* r )
 	rect.w -= BORDER_SIZE * 2;
 	rect.h -= BORDER_SIZE * 2;
 
+    // Fill the button with the color
 	SDL_SetRenderDrawColor(r, color.getR(), color.getG(), color.getB(), 0xFF);
 	SDL_RenderFillRect(r, &rect);
 
@@ -56,7 +57,7 @@ void Button::render( SDL_Renderer* r )
 		SDL_RenderCopy(r, this->labelTexture, 0, &rect);
 	}
 }
-
+// Set the button to the view by generating the texture
 void Button::onAddToView(View* v)
 {
 	// Generate label texture.
@@ -64,32 +65,28 @@ void Button::onAddToView(View* v)
 	this->labelTexture = SDL_CreateTextureFromSurface(this->view->getSDLRenderer(), temp);
 	SDL_FreeSurface(temp);
 }
-
+// change color wgen hover
 void Button::onMouseHover()
 {
-		/*cout << this->color.getR() << endl;
-		cout << this->color.getG() << endl;
-		cout << this->color.getB() << endl;*/
+	
 	
 	if(this->isMouseHovering())
 	{
 		this->setColor(80, 80, 80);
-		//this->setColor(0x00, 0x00, 0x00);
+
 	}
-	/*else {
-		this->setColor(this->color->getR(), 255, 255);
-	}*/
+
 	
 }
-
+// change color when not hover
 void Button::onMouseUnhover()
 {
 	this->setColor(255, 255, 255);
 }
-
+// call function Callback on click
 void Button::onMouseClick()
 {
-	//this->setColor(220, 220, 220);
+
 
 	if (this->onClickCallback)
 		this->onClickCallback();
